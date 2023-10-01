@@ -9,15 +9,16 @@
     <!-- Checkbox para Pago Virtual -->
 
     <!-- Logos de tarjetas -->
-    <CheckBox
+
+    <RadioButton
         android:id="@+id/checkBoxPagoVirtual"
         android:layout_width="110dp"
         android:layout_height="48dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="96dp"
         android:text="@string/virtual_pago"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,7 +118,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
 
-    <CheckBox
+    <RadioButton
         android:id="@+id/checkBoxPagoLocal"
         android:layout_width="110dp"
         android:layout_height="48dp"
@@ -133,6 +134,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="250dp"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
@@ -151,8 +153,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="- Humberto Primo 680"
             android:inputType="text"
+            android:text="- Humberto Primo 680"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -162,8 +164,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="- Complejo Capitalinas, Edificio Suquía"
             android:inputType="text"
+            android:text="- Complejo Capitalinas, Edificio Suquía"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -173,8 +175,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="- Piso 2, Oficina 22"
             android:inputType="text"
+            android:text="- Piso 2, Oficina 22"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -184,11 +186,35 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="- Córdoba, Capital, Argentina"
             android:inputType="text"
+            android:text="- Córdoba, Capital, Argentina"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/btn_confirmacion"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/btn_volver"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

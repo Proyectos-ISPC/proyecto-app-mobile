@@ -14,4 +14,6 @@
     <string name="numero_tarjeta">Número de tarjeta</string>
     <string name="fecha_expiracion">Fecha de expiración</string>
     <string name="codigo_seguridad">CVV</string>
+    <string name="btn_confirmacion">Confirmar compra</string>
+    <string name="btn_volver">Volver</string>
 </resources>
