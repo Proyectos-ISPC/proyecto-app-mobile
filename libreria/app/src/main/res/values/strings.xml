@@ -4,6 +4,9 @@
     <string name="title_dashboard">Catálogo</string>
     <string name="title_notifications">Mi usuario</string>
     <string name="title_contact">Contacto</string>
+    <string name="name">Nombre y apellido</string>
+    <string name="mail">Correo electrónico</string>
+    <string name="password">Contraseña</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
