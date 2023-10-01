@@ -16,7 +16,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".ui.catalogue"
+            android:name=".catalogue"
             android:exported="false" />
         <activity
             android:name=".home"
