@@ -4,8 +4,8 @@
     android:shape="rectangle">
     <solid android:color="#FFFFFF" /> <!-- Fondo blanco -->
     <stroke
-        android:width="1dp"  <!-- Grosor del borde -->
-        android:color="@color/colorGray"/> <!-- Color del borde -->
+        android:width="1dp"
+        android:color="@color/colorGray" /> <!-- Grosor y color del borde -->
     <padding
         android:left="5dp"
         android:right="5dp"

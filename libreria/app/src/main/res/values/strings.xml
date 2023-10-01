@@ -9,4 +9,9 @@
 
     <!-- Strings para activity_pago -->
     <string name="virtual_pago">Pago Virtual</string>
+    <string name="virtual_local">Pago Local</string>
+    <string name="nombre_completo">Nombre como figura en la tarjeta</string>
+    <string name="numero_tarjeta">Número de tarjeta</string>
+    <string name="fecha_expiracion">Fecha de expiración</string>
+    <string name="codigo_seguridad">CVV</string>
 </resources>

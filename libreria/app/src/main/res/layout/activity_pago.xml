@@ -12,12 +12,12 @@
     <CheckBox
         android:id="@+id/checkBoxPagoVirtual"
         android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="136dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="128dp"
         android:text="@string/virtual_pago"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,10 +25,10 @@
         android:id="@+id/logosTarjetas"
         android:layout_width="122dp"
         android:layout_height="28dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/checkBoxPagoVirtual">
 
@@ -36,66 +36,150 @@
             android:id="@+id/logoVisa"
             android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/logo_visa"
-            android:tint="@color/colorGray" />
+            app:tint="@color/colorGray" />
 
         <ImageView
             android:id="@+id/logoMastercard"
             android:layout_width="30dp"
             android:layout_height="29dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/logo_mastercard"
-            android:tint="@color/colorGray" />
+            app:tint="@color/colorGray" />
 
         <ImageView
             android:id="@+id/logoAmex"
             android:layout_width="42dp"
             android:layout_height="match_parent"
             android:src="@drawable/logo_amex"
-            android:tint="@color/colorGray" />
+            app:tint="@color/colorGray" />
     </LinearLayout>
 
     <!-- Formulario para Pago Virtual -->
-    <LinearLayout
-        android:id="@+id/formularioPagoVirtual"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/form_border"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:visibility="gone"
+    <!-- Campos del formulario -->
+
+    <EditText
+        android:id="@+id/editTextNombreCompleto"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/nombre_completo"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logosTarjetas">
+        app:layout_constraintTop_toBottomOf="@+id/logosTarjetas" />
 
-        <!-- Campos del formulario -->
-        <EditText
-            android:id="@+id/editTextNombreCompleto"
-            android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextNumeroTarjeta"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/numero_tarjeta"
+        android:inputType="number"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreCompleto" />
+
+    <EditText
+        android:id="@+id/editTextCodigoSeguridad"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/codigo_seguridad"
+        android:inputType="number"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
+
+    <EditText
+        android:id="@+id/editTextFechaExpiracion"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/fecha_expiracion"
+        android:inputType="date"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPagoLocal"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="192dp"
+        android:text="@string/virtual_local"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFechaExpiracion"
+        app:layout_constraintVertical_bias="0.397" />
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="76dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPagoLocal"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textDireccion1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Nombre Completo" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="- Humberto Primo 680"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="515dp" />
 
-        <EditText
-            android:id="@+id/editTextNumeroTarjeta"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textDireccion2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Número de Tarjeta"
-            android:inputType="number" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="- Complejo Capitalinas, Edificio Suquía"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="515dp" />
 
-        <EditText
-            android:id="@+id/editTextFechaExpiracion"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textDireccion3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Fecha de Expiración"
-            android:inputType="date" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="- Piso 2, Oficina 22"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="515dp" />
 
-        <EditText
-            android:id="@+id/editTextCodigoSeguridad"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Código de Seguridad"
-            android:inputType="number" />
+        <TextView
+            android:id="@+id/textDireccion4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="- Córdoba, Capital, Argentina"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="515dp" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
