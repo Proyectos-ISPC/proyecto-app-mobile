@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        app:srcCompat="@drawable/iconoFlechaIzq" />
+        app:srcCompat="@drawable/icono_flecha_izq" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@drawable/iconoCarrito" />
+        app:srcCompat="@drawable/icono_carrito" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/confirmacionCompra" />
+        app:srcCompat="@drawable/confirmacion_compra" />
 
     <TextView
         android:id="@+id/textView1"
@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:srcCompat="@drawable/progresoCompraTarjeta" />
+        app:srcCompat="@drawable/progreso_compra_tarjeta" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -172,7 +172,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/progresoCompraPuntos" />
+        app:srcCompat="@drawable/progreso_compra_puntos" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -187,7 +187,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/progresoCompraPuntos" />
+        app:srcCompat="@drawable/progreso_compra_puntos" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -201,7 +201,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/progresoCompraCheckVerde" />
+        app:srcCompat="@drawable/progreso_compra_check_verde" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -214,7 +214,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.466"
-        app:srcCompat="@drawable/progresoCompraCamion" />
+        app:srcCompat="@drawable/progreso_compra_camion" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
