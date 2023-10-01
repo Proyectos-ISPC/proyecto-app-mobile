@@ -1,4 +1,4 @@
-package com.proyectoispc.libreria.ui;
+package com.proyectoispc.libreria;
 
 import androidx.appcompat.app.AppCompatActivity;
 
