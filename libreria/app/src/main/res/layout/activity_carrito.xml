@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F9F8">
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -28,6 +29,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
+
     <ImageView
         android:id="@+id/imageView33"
         android:layout_width="320dp"
@@ -81,7 +83,7 @@
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toStartOf="@+id/textView22"
         app:layout_constraintTop_toTopOf="@+id/textView20"
-        app:srcCompat="@drawable/iconoMas" />
+        app:srcCompat="@drawable/icono_suma" />
 
     <ImageView
         android:id="@+id/imageView32"
@@ -91,7 +93,7 @@
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView33"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:srcCompat="@drawable/iconoMenos" />
+        app:srcCompat="@drawable/icono_menos" />
 
     <ImageView
         android:id="@+id/imageView34"
@@ -101,7 +103,7 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView32"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:srcCompat="@drawable/iconoPapelera" />
+        app:srcCompat="@drawable/icono_papelera" />
 
     <TextView
         android:id="@+id/textView23"
@@ -196,7 +198,7 @@
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toStartOf="@+id/textView18"
         app:layout_constraintTop_toTopOf="@+id/textView19"
-        app:srcCompat="@drawable/iconoMas" />
+        app:srcCompat="@drawable/icono_suma" />
 
     <TextView
         android:id="@+id/textView18"
@@ -220,7 +222,7 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView26"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:srcCompat="@drawable/iconoPapelera" />
+        app:srcCompat="@drawable/icono_papelera" />
 
     <ImageView
         android:id="@+id/imageView26"
@@ -230,7 +232,7 @@
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView25"
         app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:srcCompat="@drawable/iconoMenos" />
+        app:srcCompat="@drawable/icono_menos" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -304,7 +306,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        app:srcCompat="@drawable/iconoFlechaIzq" />
+        app:srcCompat="@drawable/icono_flecha_izq" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -317,7 +319,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@drawable/iconoCarrito" />
+        app:srcCompat="@drawable/icono_carrito" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -350,7 +352,7 @@
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:srcCompat="@drawable/iconoMas" />
+        app:srcCompat="@drawable/icono_suma" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -360,7 +362,7 @@
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:srcCompat="@drawable/iconoMenos" />
+        app:srcCompat="@drawable/icono_menos" />
 
     <TextView
         android:id="@+id/textView5"
@@ -394,7 +396,7 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:srcCompat="@drawable/iconoPapelera" />
+        app:srcCompat="@drawable/icono_papelera" />
 
     <TextView
         android:id="@+id/textView7"
