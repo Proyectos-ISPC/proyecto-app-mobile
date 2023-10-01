@@ -1,4 +1,4 @@
-package com.proyectoispc.libreria.ui;
+package com.proyectoispc.libreria;
 
 import android.os.Bundle;
 import android.widget.CheckBox;
@@ -6,8 +6,9 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
-public class CheckboxVirtualActivity extends AppCompatActivity {
+public class CheckboxVirtual extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
