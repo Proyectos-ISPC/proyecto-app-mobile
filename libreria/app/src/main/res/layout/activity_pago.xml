@@ -38,7 +38,8 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:src="@drawable/logo_visa"
-            app:tint="@color/colorGray" />
+            android:contentDescription="Logo Visa"/>
+            <!--app:tint="@color/colorGray"-->
 
         <ImageView
             android:id="@+id/logoMastercard"
@@ -46,15 +47,18 @@
             android:layout_height="29dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/logo_mastercard"
-            app:tint="@color/colorGray" />
+            android:contentDescription="Logo Mastercard"/>
+            <!--app:tint="@color/colorGray"-->
 
         <ImageView
             android:id="@+id/logoAmex"
             android:layout_width="42dp"
             android:layout_height="match_parent"
             android:src="@drawable/logo_amex"
-            app:tint="@color/colorGray" />
-    </LinearLayout>
+            android:contentDescription="Logo American Express"/>
+
+            <!--app:tint="@color/colorGray"-->
+</LinearLayout>
 
     <!-- Formulario para Pago Virtual -->
     <!-- Campos del formulario -->
@@ -68,6 +72,7 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/nombre_completo"
         android:textSize="13sp"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,6 +152,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="- Humberto Primo 680"
+            android:inputType="text"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -157,6 +163,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="- Complejo Capitalinas, Edificio Suquía"
+            android:inputType="text"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -167,6 +174,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="- Piso 2, Oficina 22"
+            android:inputType="text"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
 
@@ -177,6 +185,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="- Córdoba, Capital, Argentina"
+            android:inputType="text"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="515dp" />
     </LinearLayout>
