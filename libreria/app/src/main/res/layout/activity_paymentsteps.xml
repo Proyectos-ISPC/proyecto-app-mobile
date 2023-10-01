@@ -25,6 +25,7 @@
             android:contentDescription="Imagen camión"
             app:srcCompat="@drawable/compra_envio"
             app:tint="@color/colorGray2" />
+            <!-- app:tint="@color/colorViolet" -->
 
         <ImageView
             android:id="@+id/imageCompraPoint1"
@@ -75,6 +76,7 @@
             android:contentDescription="Imagen de tarjeta"
             app:srcCompat="@drawable/compra_pago"
             app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
 
         <ImageView
             android:id="@+id/imageCompraPoint5"
@@ -125,6 +127,7 @@
             android:contentDescription="Compra realizada"
             app:srcCompat="@drawable/compra_realizada"
             app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
