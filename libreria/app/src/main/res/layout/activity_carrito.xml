@@ -319,7 +319,7 @@
         app:layout_constraintStart_toEndOf="@+id/flechaAtras"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@drawable/icono_carrito" />
+        app:srcCompat="@mipmap/icono_carrito" />
 
     <ImageView
         android:id="@+id/fondoBlanco1"
