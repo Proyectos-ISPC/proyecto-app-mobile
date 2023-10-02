@@ -21,7 +21,7 @@ A través de esta aplicación, los usuarios pueden explorar el catálogo de libr
     <li><b>👨‍💻 <a href="https://github.com/MDLDeveloper">LEDESMA Mario Daniel</a></b></li>
     <li><b>👨‍💻 <a href="https://github.com/carlos-linero">LINERO ACOSTA Carlos Mario</a></b></li>
     <li><b>👩‍💻 <a href="https://github.com/carlariossuarez">RIOS SUAREZ Carla Ayelen</a></b></li>  
-    <li><b>👩‍💻 <a href="https://github.com/tefsantana">SANTANA FAGNANI Estafania Muriel</a></b></li>  
+    <li><b>👩‍💻 <a href="https://github.com/tefsantana">SANTANA FAGNANI Estefania Muriel</a></b></li>  
 </ul>
 <br> 
 
