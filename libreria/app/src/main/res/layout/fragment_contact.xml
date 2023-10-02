@@ -8,21 +8,44 @@
 
 
     <TextView
-        android:id="@+id/descriptionContact"
-        android:layout_width="333dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="10dp"
-        android:text="Envianos un mensaje y te contestaremos a la brevedad."
+        android:id="@+id/titleContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Estemos en contacto"
         android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        android:textFontWeight="500"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleContact"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="343dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/name"
+            android:layout_width="335dp"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:textSize="17dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/ubicationContact"
@@ -36,7 +59,20 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findUsContact"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="39dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_launcher_marker_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ubicationContact"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findUsContact"
         app:layout_constraintVertical_bias="0.003" />
@@ -82,22 +118,7 @@
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/findUsContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="488dp"
-        android:fontFamily="@font/rubik_medium"
-        android:text="Encontranos en"
-        android:textColor="@color/black"
-        android:textFontWeight="500"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
@@ -123,55 +144,37 @@
             android:textSize="17dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="343dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="10dp"
-        android:hint="@string/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="NotSibling">
-
-        <com.google.android.material.textfield.TextInputEditText
-
-            android:id="@+id/name"
-            android:layout_width="335dp"
-            android:layout_height="40dp"
-            android:inputType="text"
-            android:textSize="17dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
-        android:id="@+id/titleContact"
+        android:id="@+id/findUsContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="424dp"
         android:fontFamily="@font/rubik_medium"
-        android:text="Estemos en contacto"
+        android:text="Encontranos en"
         android:textColor="@color/black"
         android:textFontWeight="500"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="39dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/ic_launcher_marker_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ubicationContact"
-        app:layout_constraintHorizontal_bias="0.666"
+    <TextView
+        android:id="@+id/descriptionContact"
+        android:layout_width="333dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:text="Envianos un mensaje y te contestaremos a la brevedad."
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findUsContact"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/titleContact"
+        app:layout_constraintVertical_bias="0.102" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
