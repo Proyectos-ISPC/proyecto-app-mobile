@@ -12,17 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Libreria"
         tools:targetApi="31">
+
         <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".ui.catalogue"
+            android:name=".catalogue"
             android:exported="false" />
         <activity
             android:name=".home"
             android:exported="false" />
         <activity
             android:name=".DetailBook"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".Carrito"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

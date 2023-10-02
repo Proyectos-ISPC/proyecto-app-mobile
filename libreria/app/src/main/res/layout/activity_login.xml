@@ -4,67 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".Login">
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/login_img"
         android:layout_width="284dp"
         android:layout_height="284dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077"
-        app:srcCompat="@drawable/register_image" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:ignore="NotSibling">
-
-        <com.google.android.material.textfield.TextInputEditText
-
-            android:layout_width="335dp"
-            android:layout_height="40dp"
-            android:layout_margin="48dp"
-            android:inputType="text"
-            android:textSize="13dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="606dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.12"
+        app:srcCompat="@drawable/login_image" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Te invitamos a formar parte de nuestra comunidad."
-        android:textColor="#626364"
+        android:layout_marginTop="28dp"
+        android:text="Te damos la bienvenida. Nos alegra tenerte por acá."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintTop_toBottomOf="@+id/login_img" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="24dp"
         android:hint="@string/mail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:ignore="NotSibling">
+        app:layout_constraintTop_toBottomOf="@+id/text_login"
+        tools:ignore="NotSibling"
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -76,43 +50,43 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
 
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="@string/password"
+        app:layout_constraintTop_toBottomOf="@+id/text_login"
+        tools:ignore="NotSibling"
+        tools:layout_editor_absoluteX="0dp">
+
         <com.google.android.material.textfield.TextInputEditText
 
             android:layout_width="335dp"
             android:layout_height="40dp"
             android:layout_margin="48dp"
             android:inputType="text"
-            android:textSize="13dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="473dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="132dp"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:ignore="NotSibling">
+            android:textSize="13dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="606dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/account"
         android:layout_width="335dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#538DCC"
+        android:onClick="login"
         android:text="Crear cuenta"
         android:textAllCaps="false"
         android:textColor="#FCFEFF"
-        android:onClick="register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
