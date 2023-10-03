@@ -4,7 +4,23 @@
     <string name="title_dashboard">Catálogo</string>
     <string name="title_notifications">Mi usuario</string>
     <string name="title_contact">Contacto</string>
+    <string name="name">Nombre y apellido</string>
+    <string name="mail">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="leave_message">Dejanos tu mensaje</string>
+    <string name="send_message">Enviar mensaje</string>
+    <string name="micuenta">Mi Cuenta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="micuenta">Mi Cuenta</string>
+    
+
+    <!-- Strings para activity_pago -->
+    <string name="virtual_pago">Pago Virtual</string>
+    <string name="virtual_local">Pago Local</string>
+    <string name="nombre_completo">Nombre como figura en la tarjeta</string>
+    <string name="numero_tarjeta">Número de tarjeta</string>
+    <string name="fecha_expiracion">Fecha de expiración</string>
+    <string name="codigo_seguridad">CVV</string>
+    <string name="btn_confirmacion">Confirmar compra</string>
+    <string name="btn_volver">Volver</string>
 </resources>
