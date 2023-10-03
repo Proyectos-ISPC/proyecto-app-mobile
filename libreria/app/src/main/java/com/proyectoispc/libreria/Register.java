@@ -15,7 +15,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void register(View view) {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+        startActivity(new Intent(getApplicationContext(), Login.class));
+        overridePendingTransition(0,0);
     }
 }
