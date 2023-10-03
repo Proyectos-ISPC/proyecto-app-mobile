@@ -34,13 +34,19 @@ public class Catalogue extends AppCompatActivity {
                     return true;
                 }
 
+                if(id == R.id.catalogue){
+                    return true;
+                }
+
                 if(id == R.id.contact){
-                    startActivity(new Intent(getApplicationContext(), BookDetail.class));
+                    startActivity(new Intent(getApplicationContext(),Contact.class));
                     overridePendingTransition(0,0);
                     return true;
                 }
 
-                if(id == R.id.catalogue){
+                if(id == R.id.profile){
+                    startActivity(new Intent(getApplicationContext(),Profile.class));
+                    overridePendingTransition(0,0);
                     return true;
                 }
 

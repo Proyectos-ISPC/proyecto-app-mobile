@@ -21,4 +21,6 @@
     <string name="codigo_seguridad">CVV</string>
     <string name="btn_confirmacion">Confirmar compra</string>
     <string name="btn_volver">Volver</string>
+
+
 </resources>
