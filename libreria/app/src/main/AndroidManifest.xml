@@ -16,6 +16,9 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
+            android:name=".activity_micuenta"
+            android:exported="false" />
+        <activity
             android:name=".Contact"
             android:exported="false" />
         <activity

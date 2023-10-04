@@ -9,6 +9,7 @@
     <string name="password">Contraseña</string>
     <string name="leave_message">Dejanos tu mensaje</string>
     <string name="send_message">Enviar mensaje</string>
+    <string name="micuenta">Mi Cuenta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
