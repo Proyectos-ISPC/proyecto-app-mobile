@@ -19,6 +19,9 @@ public class BookDetail extends AppCompatActivity {
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
 
+        // Set Home selected
+        bottomNavigationView.setSelectedItemId(R.id.catalogue);
+
         // Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -37,9 +40,21 @@ public class BookDetail extends AppCompatActivity {
                     return true;
                 }
 
+                if(id == R.id.contact){
+                    startActivity(new Intent(getApplicationContext(),Contact.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                }
+
+                if(id == R.id.profile){
+                    startActivity(new Intent(getApplicationContext(), Profile.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                }
                 return false;
             }
         });
 
     }
+
 }

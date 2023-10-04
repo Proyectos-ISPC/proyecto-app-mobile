@@ -55,4 +55,9 @@ public class Home extends AppCompatActivity {
         });
 
     }
+
+    public void onClickBook(){
+        startActivity(new Intent(getApplicationContext(), BookDetail.class));
+        overridePendingTransition(0,0);
+    }
 }
