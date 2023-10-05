@@ -24,4 +24,23 @@
     <string name="btn_volver">Volver</string>
 
 
+    <!-- Strings para activity_checkout -->
+
+    <!-- Para titulos -->
+    <string name="titulo_envioDatos_checkout">Datos para el envío</string>
+    <string name="titulo_retiroLocal_checkout">Retiro por local</string>
+    <string name="titulo_envíoDomicilio_checkout">Envío a domicilio</string>
+    <!-- Para botones -->
+    <string name="button_irPagar_chackout">Ir a pagar</string>
+    <string name="button_volver_chackout">Volver</string>
+    <!-- Para hints -->
+    <string name="hint_nombrecompleto_checkout">Nombre y apellido</string>
+    <string name="hint_correoelectrónico_checkout">Correo electronico</string>
+    <string name="hint_códigoarea_checkout">Código de área</string>
+    <string name="hint_númerotelefono_checkout">Número de teléfono</string>
+    <string name="hint_calleynúmero_checkout">Calle y número</string>
+    <string name="hint_localidad_checkout">Localidad</string>
+    <string name="hint_provincia_checkout">Provincia</string>
+    <string name="hint_códigopostal_checkout">Código postal</string>
+
 </resources>
