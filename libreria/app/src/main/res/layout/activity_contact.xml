@@ -4,15 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.contact.contact">
+    android:background="#F7F9F8"
+    tools:context=".Contact">
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="54dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#F7F9F8"
+        app:layout_constraintBottom_toTopOf="@+id/titleContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#F7F9F8"
+        app:layout_constraintBottom_toTopOf="@+id/titleContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shoppingcarticon" />
 
     <TextView
         android:id="@+id/titleContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/rubik_medium"
         android:text="Estemos en contacto"
         android:textColor="@color/black"
@@ -25,13 +51,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="340dp"
-        android:layout_height="115dp"
+        android:layout_width="372dp"
+        android:layout_height="129dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
         android:hint="@string/leave_message"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
         tools:ignore="NotSibling">
@@ -39,8 +65,8 @@
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/message"
-            android:layout_width="335dp"
-            android:layout_height="100dp"
+            android:layout_width="361dp"
+            android:layout_height="102dp"
             android:inputType="text"
             android:textSize="17dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,7 +84,7 @@
         android:textSize="16sp"
         app:iconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
@@ -66,9 +92,8 @@
         android:id="@+id/findUsContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="476dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="596dp"
         android:fontFamily="@font/rubik_medium"
         android:text="Encontranos en"
         android:textColor="@color/black"
@@ -81,13 +106,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="341dp"
-        android:layout_height="52dp"
+        android:layout_width="388dp"
+        android:layout_height="60dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="10dp"
         android:hint="@string/mail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.818"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         tools:ignore="NotSibling">
@@ -95,8 +121,8 @@
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/email"
-            android:layout_width="335dp"
-            android:layout_height="40dp"
+            android:layout_width="362dp"
+            android:layout_height="43dp"
             android:inputType="text"
             android:textSize="17dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -105,29 +131,28 @@
         android:id="@+id/ubicationContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/rubik_light"
         android:text="Humberto Primo 680. Córdoba, Argentina."
         android:textColor="@color/black"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findUsContact" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="343dp"
-        android:layout_height="47dp"
+        android:layout_width="372dp"
+        android:layout_height="49dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="152dp"
         android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="NotSibling">
@@ -135,7 +160,7 @@
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/name"
-            android:layout_width="335dp"
+            android:layout_width="363dp"
             android:layout_height="40dp"
             android:inputType="text"
             android:textSize="17dp" />
@@ -143,40 +168,40 @@
 
     <TextView
         android:id="@+id/descriptionContact"
-        android:layout_width="333dp"
-        android:layout_height="41dp"
+        android:layout_width="370dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="Envianos un mensaje y te contestaremos a la brevedad."
         android:textColor="@color/black"
         android:textSize="17dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleContact"
-        app:layout_constraintVertical_bias="0.409" />
-
+        app:layout_constraintVertical_bias="0.533" />
 
     <ImageView
-        android:layout_width="39dp"
-        android:layout_height="34dp"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/ic_launcher_marker_foreground"
         app:layout_constraintEnd_toStartOf="@+id/ubicationContact"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findUsContact" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="399dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/menu_navigation" />
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
@@ -185,10 +210,11 @@
         android:layout_height="1036dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423"
+        app:layout_constraintVertical_bias="0.008"
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

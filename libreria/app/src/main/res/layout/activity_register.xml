@@ -36,7 +36,7 @@
             android:layout_height="40dp"
             android:layout_margin="48dp"
             android:inputType="text"
-            android:textSize="13dp"
+            android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
 
@@ -72,9 +72,25 @@
             android:layout_height="40dp"
             android:layout_margin="48dp"
             android:inputType="text"
-            android:textSize="13dp"
+            android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="444dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="132dp"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -82,20 +98,9 @@
             android:layout_height="40dp"
             android:layout_margin="48dp"
             android:inputType="text"
-            android:textSize="13dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="473dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="132dp"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        tools:ignore="NotSibling">
+            android:textSize="30px"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="606dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

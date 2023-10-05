@@ -27,7 +27,7 @@ public class activity_micuenta extends AppCompatActivity {
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_micuenta.this, home.class);
+                Intent intent = new Intent(activity_micuenta.this, Home.class);
                 startActivity(intent);
             }
         });

@@ -151,7 +151,7 @@
             android:layout_weight="2"
             android:contentDescription="Compra realizada"
             app:srcCompat="@drawable/compra_realizada"
-            app:tint="@color/greenCheck" />
+            app:tint="@color/color1" />
         <!-- app:tint="@color/colorViolet" -->
     </LinearLayout>
 
