@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,6 +20,13 @@ public class Carrito extends AppCompatActivity {
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
+        ImageView flechaAtras = findViewById(R.id.flechaAtras);
+        flechaAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
