@@ -12,24 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Libreria"
         tools:targetApi="31">
-
         <activity
-            android:name=".catalogue"
+            android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".home"
+            android:name=".activity_micuenta"
             android:exported="false" />
         <activity
-            android:name=".DetailBook"
+            android:name=".Contact"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".BookDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Catalogue"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Carrito"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Register"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>

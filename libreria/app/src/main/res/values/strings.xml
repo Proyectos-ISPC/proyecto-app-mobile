@@ -7,6 +7,9 @@
     <string name="name">Nombre y apellido</string>
     <string name="mail">Correo electrónico</string>
     <string name="password">Contraseña</string>
+    <string name="leave_message">Dejanos tu mensaje</string>
+    <string name="send_message">Enviar mensaje</string>
+    <string name="micuenta">Mi Cuenta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -19,4 +22,6 @@
     <string name="codigo_seguridad">CVV</string>
     <string name="btn_confirmacion">Confirmar compra</string>
     <string name="btn_volver">Volver</string>
+
+
 </resources>
