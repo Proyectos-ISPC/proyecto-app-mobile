@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Libreria"
         tools:targetApi="31">
         <activity
+            android:name=".feedbackErrorBuscador"
+            android:exported="false" />
+        <activity
+            android:name=".feedbackerrorbusqueda"
+            android:exported="false" />
+        <activity
             android:name=".checkout"
             android:exported="false" />
         <activity
