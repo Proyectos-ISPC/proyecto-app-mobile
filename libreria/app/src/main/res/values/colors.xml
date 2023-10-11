@@ -11,6 +11,8 @@
     <color name="grey_background">#F7F9F8</color>
     <color name="dark_text">#041E41</color>
     <color name="grey_text">#686767</color>
+    <color name="greenCheck">#00FF00</color>
+    <color name="paymentAproved">#A4D640</color>
 
     <color name="color1">#041E41</color>
     <color name="color2">#538DCC</color>

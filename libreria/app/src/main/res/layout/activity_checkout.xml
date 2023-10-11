@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".checkout">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="351dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_envíoDomicilio_checkout"
+            android:textColor="@color/dark_text"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="178dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_númerotelefono_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toEndOf="@+id/editTextText3" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono_flecha_izq" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/icono_carrito" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="230dp"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706">
+
+
+        <ImageView
+            android:id="@+id/imageCompraEnvio"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="2"
+            android:background="@drawable/circular_background_paymentsteps"
+            android:contentDescription="Imagen camión"
+            android:padding="7dp"
+            app:srcCompat="@drawable/compra_envio"
+            app:tint="@color/colorViolet" />
+        <!-- app:tint="@color/colorViolet" -->
+
+        <ImageView
+            android:id="@+id/imageCompraPoint1"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint2"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint3"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint4"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPago"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="2"
+            android:contentDescription="Imagen de tarjeta"
+            app:srcCompat="@drawable/compra_pago"
+            app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
+
+        <ImageView
+            android:id="@+id/imageCompraPoint5"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint6"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint7"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint8"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraRealizada"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="2"
+            android:contentDescription="Compra realizada"
+            app:srcCompat="@drawable/compra_realizada"
+            app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/titulo_envioDatos_checkout"
+        android:textColor="@color/dark_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_nombrecompleto_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_calleynúmero_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText8"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_códigopostal_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_correoelectrónico_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_códigoarea_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText7"
+        android:layout_width="172dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_provincia_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toEndOf="@+id/editTextText6" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="168dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background_checkout"
+        android:ems="10"
+        android:hint="@string/hint_localidad_checkout"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="351dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_retiroLocal_checkout"
+            android:textColor="@color/dark_text"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue_soft"
+        android:text="@string/button_irPagar_chackout"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/button_volver_chackout"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
