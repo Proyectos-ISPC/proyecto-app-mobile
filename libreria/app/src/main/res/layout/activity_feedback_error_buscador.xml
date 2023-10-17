@@ -23,7 +23,7 @@
         android:layout_marginTop="56dp"
         android:text="@string/text_losiento_feedback_error"
         android:textColor="@color/color3"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
