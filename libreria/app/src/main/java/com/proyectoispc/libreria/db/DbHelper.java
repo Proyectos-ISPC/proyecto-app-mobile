@@ -14,9 +14,9 @@ public class DbHelper extends SQLiteOpenHelper {
 
 
     private static final String ID = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
-    private static final String EMAIL = " email TEXT,";
-    private static final String PASSWORD = " password TEXT,";
-    private static final String NAME = " name TEXT,";
+    private static final String EMAIL = " email TEXT NOT NULL,";
+    private static final String PASSWORD = " password TEXT NOT NULL,";
+    private static final String NAME = " name TEXT NOT NULL,";
     private static final String LAST_NAME = " last_name TEXT,";
     private static final String DNI = " dni TEXT,";
     private static final String ADDRESS = " address TEXT,";
