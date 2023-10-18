@@ -37,6 +37,8 @@
         android:drawablePadding="12dp"
         android:drawableStart="@drawable/vector_search"
         android:hint="Buscá por género, autor, título"
+        android:background="@drawable/edittext_background_checkout"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />

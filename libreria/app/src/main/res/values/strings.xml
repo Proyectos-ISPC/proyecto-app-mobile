@@ -43,4 +43,14 @@
     <string name="hint_provincia_checkout">Provincia</string>
     <string name="hint_códigopostal_checkout">Código postal</string>
 
+    <!-- Strings para activity_feedback_error_buscador -->
+
+    <!--Strings para text-->
+    <string name="text_losiento_feedback_error">Lo sentimos :(</string>
+    <string name="text_noencuentrolibros_feedback_error">No encontramos el libro que estas buscando</string>
+
+    <!--Strings para button-->
+    <string name="button_volver_feedback_error">Volver al catálogo</string>
+
+
 </resources>
