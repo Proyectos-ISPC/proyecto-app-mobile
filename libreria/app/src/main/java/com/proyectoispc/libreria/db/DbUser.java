@@ -3,8 +3,9 @@ package com.proyectoispc.libreria.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-
 import androidx.annotation.Nullable;
+import android.database.Cursor;
+
 
 public class DbUser extends DbHelper {
 
@@ -36,4 +37,18 @@ public class DbUser extends DbHelper {
 
 
     }
+
+    public boolean checkUserCredentials(String email, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {"_id"};
+        String selection = "email = ? AND password = ?";
+        String[] selectionArgs = {email, password};
+
+        Cursor cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null);
+        boolean isAuthenticated = cursor.getCount() > 0;
+        cursor.close();
+
+        return isAuthenticated;
+    }
+
 }
