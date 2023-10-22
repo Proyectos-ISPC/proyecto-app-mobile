@@ -67,16 +67,13 @@
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-
             android:layout_width="335dp"
             android:layout_height="40dp"
             android:layout_margin="48dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -86,6 +83,7 @@
         android:layout_height="59dp"
         android:layout_marginTop="132dp"
         android:hint="@string/password"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,15 +91,13 @@
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-
             android:layout_width="335dp"
             android:layout_height="40dp"
             android:layout_margin="48dp"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
