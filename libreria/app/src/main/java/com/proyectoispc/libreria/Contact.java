@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -21,6 +23,23 @@ public class Contact extends AppCompatActivity {
 
         // Set Home selected
         bottomNavigationView.setSelectedItemId(R.id.contact);
+
+        ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
+        ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
+        imagenFlecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        imagenCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
 
         // Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
