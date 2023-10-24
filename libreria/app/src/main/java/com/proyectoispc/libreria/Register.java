@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity {
 
                 if(id > 0){
                     Toast.makeText(Register.this, "Registro exitoso", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(),Home.class));
+                    startActivity(new Intent(getApplicationContext(),Login.class));
                     overridePendingTransition(0,0);
                 }
             }
