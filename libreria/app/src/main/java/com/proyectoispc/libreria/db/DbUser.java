@@ -2,6 +2,7 @@ package com.proyectoispc.libreria.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.Nullable;
 import android.database.Cursor;
@@ -9,7 +10,9 @@ import android.database.Cursor;
 
 public class DbUser extends DbHelper {
 
+
     Context context;
+
 
     public DbUser(@Nullable Context context) {
         super(context);
@@ -43,6 +46,8 @@ public class DbUser extends DbHelper {
         Cursor cursor = db.rawQuery("select * from t_user where email = ?", new String[] {email} );
 
         if(cursor.getCount() > 0){
+
+
             return true;
         } else return false;
     }
@@ -55,6 +60,13 @@ public class DbUser extends DbHelper {
             return true;
         } else {
             return false;}
+    }
+
+    public Cursor getUserData(String email, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where email = ? and password = ?", new String[] {email, password} );
+
+        return cursor;
     }
 
 }

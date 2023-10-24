@@ -29,7 +29,6 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         createUserTable(sqLiteDatabase);
-
     }
 
     @Override
@@ -41,6 +40,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private void createUserTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USER + " (" +
-                ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + " phone TEXT)");
+                ID + NAME + LAST_NAME + EMAIL + DNI + ADDRESS  + PHONE + " password TEXT)");
     }
 }

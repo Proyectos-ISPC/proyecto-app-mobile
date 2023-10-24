@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/name"
         android:layout_width="207dp"
         android:layout_height="24dp"
         android:layout_marginTop="28dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/email"
         android:layout_width="261dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <ImageButton
         android:id="@+id/imageButton2"
