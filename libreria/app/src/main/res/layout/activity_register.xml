@@ -21,8 +21,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="335dp"
+        android:layout_height="70dp"
         android:layout_marginTop="20dp"
         android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,15 +31,13 @@
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-
             android:layout_width="335dp"
-            android:layout_height="40dp"
-            android:layout_margin="48dp"
+            android:layout_height="45dp"
             android:inputType="text"
             android:textSize="30px"
+            android:paddingBottom="13dp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -49,74 +47,99 @@
         android:layout_marginTop="20dp"
         android:text="Te invitamos a formar parte de nuestra comunidad."
         android:textColor="#626364"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintVertical_bias="0.044" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_width="335dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/mail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/nameInput"
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-
             android:layout_width="335dp"
-            android:layout_height="40dp"
-            android:layout_margin="48dp"
-            android:inputType="text"
+            android:layout_height="45dp"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="13dp"
             android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="606dp" />
-
-
+            tools:layout_editor_absoluteY="0dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="444dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="132dp"
+        android:layout_width="335dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput"
+        app:passwordToggleEnabled="true"
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
-
             android:layout_width="335dp"
-            android:layout_height="40dp"
-            android:layout_margin="48dp"
-            android:inputType="text"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:paddingBottom="13dp"
             android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="335dp"
         android:layout_height="48dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#538DCC"
         android:text="Crear cuenta"
         android:textAllCaps="false"
         android:textColor="#FCFEFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="59dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="368dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="83dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="49dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
