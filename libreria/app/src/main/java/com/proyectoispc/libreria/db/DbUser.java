@@ -38,17 +38,23 @@ public class DbUser extends DbHelper {
 
     }
 
-    public boolean checkUserCredentials(String email, String password) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String[] columns = {"_id"};
-        String selection = "email = ? AND password = ?";
-        String[] selectionArgs = {email, password};
+    public boolean checkEmail(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where email = ?", new String[] {email} );
 
-        Cursor cursor = db.query(TABLE_USER, columns, selection, selectionArgs, null, null, null);
-        boolean isAuthenticated = cursor.getCount() > 0;
-        cursor.close();
+        if(cursor.getCount() > 0){
+            return true;
+        } else return false;
+    }
 
-        return isAuthenticated;
+    public boolean checkEmailPassword(String email, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where email = ? and password = ?", new String[] {email, password} );
+
+        if(cursor.getCount() > 0){
+            return true;
+        } else {
+            return false;}
     }
 
 }
