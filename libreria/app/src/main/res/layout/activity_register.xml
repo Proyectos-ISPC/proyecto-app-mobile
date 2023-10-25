@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context=".Register">
 
+    <Button
+        android:id="@+id/login"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#538DCC"
+        android:onClick="onLogin"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="#FCFEFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
     <ImageView
         android:id="@+id/imageView15"
         android:layout_width="284dp"
@@ -15,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077"
+        app:layout_constraintVertical_bias="0.008"
         app:srcCompat="@drawable/register_image" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,8 +48,8 @@
             android:layout_width="335dp"
             android:layout_height="45dp"
             android:inputType="text"
-            android:textSize="30px"
             android:paddingBottom="13dp"
+            android:textSize="30px"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="606dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -44,7 +58,7 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Te invitamos a formar parte de nuestra comunidad."
         android:textColor="#626364"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,6 +154,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="49dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="O"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
