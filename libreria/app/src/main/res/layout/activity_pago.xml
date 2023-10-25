@@ -6,6 +6,182 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <ImageView
+        android:id="@+id/flechaAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419"
+        app:srcCompat="@drawable/icono_flecha_izq" />
+
+    <ImageView
+        android:id="@+id/carritoCompra"
+        android:layout_width="29dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toEndOf="@+id/flechaAtras"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433"
+        app:srcCompat="@drawable/icono_carrito" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="88dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageCompraEnvio"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="2"
+            android:contentDescription="Imagen camión"
+            app:srcCompat="@drawable/compra_envio"
+            app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
+
+        <ImageView
+            android:id="@+id/imageCompraPoint1"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint2"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint3"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint4"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPago"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="2"
+            android:contentDescription="Imagen de tarjeta"
+            app:srcCompat="@drawable/compra_pago"
+            app:tint="@color/color1" />
+        <!-- app:tint="@color/colorViolet" -->
+
+        <ImageView
+            android:id="@+id/imageCompraPoint5"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint6"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint7"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraPoint8"
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:contentDescription="Imagen punto"
+            app:srcCompat="@drawable/compra_point"
+            app:tint="@color/colorGray2" />
+
+        <ImageView
+            android:id="@+id/imageCompraRealizada"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="2"
+            android:contentDescription="Compra realizada"
+            app:srcCompat="@drawable/compra_realizada"
+            app:tint="@color/colorGray2" />
+        <!-- app:tint="@color/colorViolet" -->
+    </LinearLayout>
+
     <!-- Checkbox para Pago Virtual -->
 
     <!-- Logos de tarjetas -->
@@ -14,7 +190,7 @@
         android:id="@+id/checkBoxPagoVirtual"
         android:layout_width="110dp"
         android:layout_height="48dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="140dp"
         android:text="@string/virtual_pago"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,6 +294,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
 
+
     <RadioButton
         android:id="@+id/checkBoxPagoLocal"
         android:layout_width="110dp"
@@ -130,8 +307,7 @@
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextFechaExpiracion"
-        app:layout_constraintVertical_bias="0.397" />
-
+        app:layout_constraintVertical_bias="0.244" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
