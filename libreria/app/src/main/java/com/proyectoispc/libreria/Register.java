@@ -18,7 +18,7 @@ import com.proyectoispc.libreria.db.DbUser;
 
 public class Register extends AppCompatActivity {
 
-    Button btnCreate;
+    Button btnCreate, btnLogin;
 
     TextInputLayout nameInputLayout, emailInputLayout, passwordInputLayout;
     EditText nameInput, emailInput, passwordInput;
@@ -33,6 +33,7 @@ public class Register extends AppCompatActivity {
         this.passwordInputLayout = findViewById(R.id.passwordInput);
 
         this.btnCreate = findViewById(R.id.registerButton);
+        this.btnLogin = findViewById(R.id.login);
         this.nameInput = nameInputLayout.getEditText();
         this.emailInput = emailInputLayout.getEditText();
         this.passwordInput = passwordInputLayout.getEditText();
@@ -49,9 +50,15 @@ public class Register extends AppCompatActivity {
 
                 if(id > 0){
                     Toast.makeText(Register.this, "Registro exitoso", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(),Login.class));
-                    overridePendingTransition(0,0);
+                    redirectToLogin();
                 }
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                redirectToLogin();
             }
         });
 
@@ -112,6 +119,11 @@ public class Register extends AppCompatActivity {
 
         this.passwordInputLayout.setError(null);
         return true;
+    }
+
+    private void redirectToLogin(){
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        overridePendingTransition(0,0);
     }
     
 }
