@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonVolver" />
 
     <TextView
         android:id="@+id/textView19"
@@ -62,7 +62,7 @@
         app:srcCompat="@drawable/editpencil" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/buttonVolver"
         android:layout_width="50dp"
         android:layout_height="38dp"
         android:layout_marginTop="16dp"
