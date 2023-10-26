@@ -26,6 +26,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
 //Atributos tabla SALE
     private static final String ID_SALE = "id_sale INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String USER_ID = "user_id INTEGER,";
     private static final String TOTAL_COST = "total_cost DECIMAL(10,2) NULL,";
     private static final String TOTAL_QUANTITY = "total_quantity INTEGER NULL";
     private static final String PAYMENT_TYPE = "payment_type VARCHAR(20) NULL";
@@ -58,6 +59,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private void createSaleTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_SALE + " (" +
-                ID_SALE + TOTAL_COST + TOTAL_QUANTITY + PAYMENT_TYPE + DELIVERY_TYPE + SALE_DATE);
+                ID_SALE + USER_ID + TOTAL_COST + TOTAL_QUANTITY + PAYMENT_TYPE + DELIVERY_TYPE + SALE_DATE + ", FOREIGN KEY(user_id) REFERENCES " + TABLE_USER + "(id))");
     }
 }
