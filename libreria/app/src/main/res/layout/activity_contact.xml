@@ -8,7 +8,7 @@
     tools:context=".Contact">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imagenFlecha"
         android:layout_width="54dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
@@ -21,7 +21,7 @@
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/imagenCarrito"
         android:layout_width="57dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"

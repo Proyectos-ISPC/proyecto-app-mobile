@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 public class activity_micuenta extends AppCompatActivity {
     ImageButton backbutton;
+
+    ImageButton carrito;
     TextView cuerpo;
     LinearLayout itemacordeon;
 
@@ -22,15 +24,23 @@ public class activity_micuenta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_micuenta);
         backbutton = findViewById(R.id.imageButton6);
+        carrito = findViewById(R.id.imageButton9);
         cuerpo = findViewById(R.id.cuerpo1);
         itemacordeon = findViewById(R.id.itemacordeon);
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_micuenta.this, Home.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
+        carrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
+
     }
 
     public void expandir(View view) {
