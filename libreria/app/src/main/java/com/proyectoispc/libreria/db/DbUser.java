@@ -47,6 +47,15 @@ public class DbUser extends DbHelper {
         } else return false;
     }
 
+    public boolean checkName(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where name = ?", new String[] {name} );
+
+        if(cursor.getCount() > 0){
+            return true;
+        } else return false;
+    }
+
     public boolean checkEmailPassword(String email, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from t_user where email = ? and password = ?", new String[] {email, password} );
@@ -55,6 +64,13 @@ public class DbUser extends DbHelper {
             return true;
         } else {
             return false;}
+    }
+
+    public Cursor getUserData(String email, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where email = ? and password = ?", new String[] {email, password} );
+
+        return cursor;
     }
 
 }
