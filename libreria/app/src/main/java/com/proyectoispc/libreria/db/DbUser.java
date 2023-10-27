@@ -73,4 +73,37 @@ public class DbUser extends DbHelper {
         return cursor;
     }
 
+    public Long updateName(String idUser, String name) {
+        long id = 0;
+        try {
+            DbHelper dbHelper = new DbHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+
+            values.put("name", name);
+            id = db.update("name",values, "id = ?", new String[] { idUser });
+        } catch (Exception e) {
+            e.toString();
+        }
+
+        return id;
+    }
+
+    public Long updateEmail(String idUser, String email) {
+        long id = 0;
+        try {
+            DbHelper dbHelper = new DbHelper(context);
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            ContentValues values = new ContentValues();
+
+            values.put("email", email);
+            id = db.update("email",values, "id = ?", new String[] { idUser });
+        } catch (Exception e) {
+            e.toString();
+        }
+
+        return id;
+    }
 }
