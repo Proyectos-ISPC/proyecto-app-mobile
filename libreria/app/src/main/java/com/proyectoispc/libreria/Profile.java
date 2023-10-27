@@ -3,7 +3,6 @@ package com.proyectoispc.libreria;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -29,7 +28,7 @@ public class Profile extends AppCompatActivity {
     LinearLayout inputNames;
     LinearLayout inputEmail;
     TextView textName, textEmail;
-    String id;
+    String id, name, email;
     TextInputLayout emailInputLayout, nameInputLayout;
     SharedPreferences sharedPreferences;
     EditText emailInput, nameInput;
@@ -48,10 +47,7 @@ public class Profile extends AppCompatActivity {
         // Se setea dinamicamente el nombre y el email
         this.textEmail = findViewById(R.id.email);
         this.textName = findViewById(R.id.name);
-        this.sharedPreferences = getSharedPreferences(Login.USER_PREF_NAME, MODE_PRIVATE);
-        this.textEmail.setText(this.sharedPreferences.getString(Login.KEY_EMAIL, null));
-        this.textName.setText(this.sharedPreferences.getString(Login.KEY_NAME, null));
-        this.id = this.sharedPreferences.getString(Login.KEY_ID, null);
+        this.fetchUserData();
 
         // Inputs y botones
         inputNames = findViewById(R.id.inputNames);
@@ -75,19 +71,15 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                if (dbUser.checkName(name)){
-                    long cant = dbUser.updateName(id, name);
-                    if (cant > 0) {
+                    boolean resp = dbUser.updateUserInfo(id, name, email);
+                    if (resp) {
                         Toast.makeText(Profile.this, "El nombre se actualizo correctamente.", Toast.LENGTH_LONG).show();
-                        textName = findViewById(R.id.name);
-                        textName.setText(name);
+                        dbUser.updateUserPrefDataByID(id);
+                        fetchUserData();
                     }
                     else {
                         Toast.makeText(Profile.this, "En este momento no se puede actualizar el nombre.", Toast.LENGTH_LONG).show();
                     }
-                } else{
-                    Toast.makeText(Profile.this, "En este momento no se puede actualizar el nombre.", Toast.LENGTH_LONG).show();
-                }
 
             }
         });
@@ -101,20 +93,15 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                if (dbUser.checkEmail(email)){
-                    long cant = dbUser.updateEmail(id, email);
-                    if (cant > 0) {
+                    boolean resp = dbUser.updateUserInfo(id, name, email);
+                    if (resp) {
                         Toast.makeText(Profile.this, "El correo se actualizo correctamente.", Toast.LENGTH_LONG).show();
-                        textEmail = findViewById(R.id.email);
-                        textEmail.setText(email);
+                        dbUser.updateUserPrefDataByID(id);
+                        fetchUserData();
                     }
                     else {
                         Toast.makeText(Profile.this, "En este momento no se puede actualizar el correo.", Toast.LENGTH_LONG).show();
                     }
-                } else{
-                    Toast.makeText(Profile.this, "En este momento no se puede actualizar el correo.", Toast.LENGTH_LONG).show();
-                }
-
             }
         });
 
@@ -217,4 +204,14 @@ public class Profile extends AppCompatActivity {
         this.nameInputLayout.setError(null);
         return true;
     }
+
+    public void fetchUserData(){
+        this.sharedPreferences = getSharedPreferences(Login.USER_PREF_NAME, MODE_PRIVATE);
+        this.name = this.sharedPreferences.getString(Login.KEY_NAME, null);
+        this.email = this.sharedPreferences.getString(Login.KEY_EMAIL, null);
+        this.textEmail.setText(this.email);
+        this.textName.setText(this.name);
+        this.id = this.sharedPreferences.getString(Login.KEY_ID, null);
+    }
+
 }
