@@ -22,12 +22,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/name"
         android:layout_width="207dp"
         android:layout_height="24dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/atkinsonhyperlegibleregular"
-        android:text="Luciano Fernandez"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -51,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19">
+        app:layout_constraintTop_toBottomOf="@+id/name">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputName"
@@ -65,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.236"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/name"
             app:layout_constraintVertical_bias="0.055"
             tools:ignore="NotSibling">
 
@@ -123,12 +122,11 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/email"
         android:layout_width="261dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/atkinsonhyperlegibleregular"
-        android:text="lucianofernandez@gmail.com"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
@@ -148,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20">
+        app:layout_constraintTop_toBottomOf="@+id/email">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputMail"
@@ -162,7 +160,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.236"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/name"
             app:layout_constraintVertical_bias="0.055"
             tools:ignore="NotSibling">
 
@@ -203,7 +201,7 @@
         android:onClick="expandirInputsName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:srcCompat="@drawable/editpencil" />
 
@@ -240,7 +238,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="expandirInputEmail"
         app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/inputNames"
         app:srcCompat="@drawable/editpencil" />
 
