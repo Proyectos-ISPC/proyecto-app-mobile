@@ -122,11 +122,11 @@
 
         <LinearLayout
             android:id="@+id/itemacordeon"
-            android:layout_width="310dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#EFF7FD"
             android:onClick="expandir"
             android:orientation="vertical"
-            android:background="#EFF7FD"
             android:padding="15dp">
 
             <TextView
@@ -136,11 +136,12 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="En Proceso"
-                android:textColor="#01D989"/>
+                android:textColor="#01D989" />
 
 
             <TextView
