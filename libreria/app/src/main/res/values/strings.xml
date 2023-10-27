@@ -4,7 +4,9 @@
     <string name="title_dashboard">Catálogo</string>
     <string name="title_notifications">Mi usuario</string>
     <string name="title_contact">Contacto</string>
-    <string name="name">Nombre y apellido</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="save">Guardar</string>
     <string name="mail">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="leave_message">Dejanos tu mensaje</string>
