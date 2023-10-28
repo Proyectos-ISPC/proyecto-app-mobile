@@ -11,12 +11,13 @@ import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class checkout extends AppCompatActivity {
+public class Pago extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_checkout);
+        setContentView(R.layout.activity_pago);
+
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
 
@@ -73,14 +74,13 @@ public class checkout extends AppCompatActivity {
         });
 
     }
-
-    public void volver(View view) {
-        Intent intent = new Intent(this, Carrito.class);
+    public void confirmarCompra(View view) {
+        Intent intent = new Intent(this, ConfirmacionCompra.class);
         startActivity(intent);
     }
 
-    public void pagar(View view) {
-        Intent intent = new Intent(this, Pago.class);
+    public void regresar(View view) {
+        Intent intent = new Intent(this, checkout.class);
         startActivity(intent);
     }
 }

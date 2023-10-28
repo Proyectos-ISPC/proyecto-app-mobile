@@ -20,7 +20,7 @@ public class Carrito extends AppCompatActivity {
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
-        ImageView flechaAtras = findViewById(R.id.flechaAtras);
+        ImageView flechaAtras = findViewById(R.id.imagenFlecha);
         flechaAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -298,7 +298,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <ImageView
-        android:id="@+id/flechaAtras"
+        android:id="@+id/imagenFlecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -318,7 +318,7 @@
         android:layout_marginEnd="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/flechaAtras"
+        app:layout_constraintStart_toEndOf="@+id/imagenFlecha"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@mipmap/icono_carrito" />
