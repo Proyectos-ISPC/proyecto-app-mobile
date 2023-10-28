@@ -2,18 +2,29 @@ package com.proyectoispc.libreria.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.Nullable;
 import android.database.Cursor;
+
+import com.proyectoispc.libreria.Login;
 
 
 public class DbUser extends DbHelper {
 
     Context context;
+    SharedPreferences sharedPreferences;
 
     public DbUser(@Nullable Context context) {
         super(context);
         this.context = context;
+    }
+
+    public Cursor getUserDataByID(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from t_user where id = ?", new String[] {id} );
+
+        return cursor;
     }
 
     public Long insertUser(String name, String email, String password) {
@@ -73,4 +84,32 @@ public class DbUser extends DbHelper {
         return cursor;
     }
 
+    public boolean updateUserInfo(String id, String name, String email){
+        boolean updateSuccesfull;
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues userData = new ContentValues();
+
+        userData.put("name", name);
+        userData.put("email", email);
+
+        int cant = db.update("t_user", userData,"id='"+id+"'",null);
+        db.close();
+
+        updateSuccesfull = cant==1;
+
+        return updateSuccesfull;
+    }
+
+    public void updateUserPrefDataByID(String id){
+        Cursor userData = getUserDataByID(id);
+        this.sharedPreferences = context.getSharedPreferences("user_pref", 0);
+
+        if(userData.moveToFirst()){
+            SharedPreferences.Editor editor = this.sharedPreferences.edit();
+            editor.putString("name", userData.getString (3));
+            editor.putString("email", userData.getString (1));
+            editor.apply();
+        }
+    }
 }

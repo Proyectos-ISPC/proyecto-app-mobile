@@ -20,6 +20,7 @@ public class Login extends AppCompatActivity {
     static final String USER_PREF_NAME = "user_pref";
     static final String KEY_NAME = "name";
     static final String KEY_EMAIL = "email";
+    static final String KEY_ID = "id";
     SharedPreferences sharedPreferences;
     Button btnLogin, btnRegister;
     TextInputLayout emailInputLayout, passwordInputLayout;
@@ -124,6 +125,7 @@ public class Login extends AppCompatActivity {
 
         if(userData.moveToFirst()){
             SharedPreferences.Editor editor = this.sharedPreferences.edit();
+            editor.putString(KEY_ID, userData.getString (0));
             editor.putString(KEY_NAME, userData.getString (3));
             editor.putString(KEY_EMAIL, userData.getString (1));
             editor.apply();

@@ -27,10 +27,11 @@ public class Profile extends AppCompatActivity {
     ImageButton carrito;
     LinearLayout inputNames;
     LinearLayout inputEmail;
-    TextView name, email;
-    TextInputLayout emailInputLayout, nameInputLayout, lastNameInputLayout;
+    TextView textName, textEmail;
+    String id, email, name;
+    TextInputLayout emailInputLayout, nameInputLayout;
     SharedPreferences sharedPreferences;
-    EditText emailInput, nameInput, lastNameInput;
+    EditText emailInput, nameInput;
     Button buttonNames, buttonEmail;
     DbUser dbUser;
 
@@ -44,20 +45,16 @@ public class Profile extends AppCompatActivity {
         carrito = findViewById(R.id.imageButton9);
 
         // Se setea dinamicamente el nombre y el email
-        this.email = findViewById(R.id.email);
-        this.name = findViewById(R.id.name);
-        this.sharedPreferences = getSharedPreferences(Login.USER_PREF_NAME, MODE_PRIVATE);
-        this.email.setText(this.sharedPreferences.getString(Login.KEY_EMAIL, null));
-        this.name.setText(this.sharedPreferences.getString(Login.KEY_NAME, null));
+        this.textEmail = findViewById(R.id.email);
+        this.textName = findViewById(R.id.name);
+        this.fetchUserData();
 
         // Inputs y botones
         inputNames = findViewById(R.id.inputNames);
         inputEmail = findViewById(R.id.inputEmail);
         this.emailInputLayout = findViewById(R.id.inputMail);
-        this.lastNameInputLayout = findViewById(R.id.inputLastName);
         this.nameInputLayout = findViewById(R.id.inputName);
         emailInput = emailInputLayout.getEditText();
-        lastNameInput = lastNameInputLayout.getEditText();
         nameInput = nameInputLayout.getEditText();
         buttonNames = findViewById(R.id.buttonNames);
         buttonEmail = findViewById(R.id.buttonEmail);
@@ -69,18 +66,20 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = nameInput.getText().toString().trim();
-                String lastName = lastNameInput.getText().toString().trim();
 
-                if(!validateInputs()){
+                if(!validateName()){
                     return;
                 }
 
-                if (dbUser.checkName(name)){
-                    Toast.makeText(Profile.this, "Los datos se actualizaron correctamente.", Toast.LENGTH_LONG).show();
-                } else{
-                    Toast.makeText(Profile.this, "En este momento no se pueden actualizar los datos.", Toast.LENGTH_LONG).show();
+                boolean resp = dbUser.updateUserInfo(id, name, email);
+                if (resp) {
+                    Toast.makeText(Profile.this, "El nombre se actualizo correctamente.", Toast.LENGTH_LONG).show();
+                    dbUser.updateUserPrefDataByID(id);
+                    fetchUserData();
                 }
-
+                else {
+                    Toast.makeText(Profile.this, "En este momento no se puede actualizar el nombre.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -89,12 +88,15 @@ public class Profile extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailInput.getText().toString().trim();
 
-                if(!validateInputs()){
+                if(!validateEmail()){
                     return;
                 }
 
-                if (dbUser.checkEmail(email)){
+                boolean resp = dbUser.updateUserInfo(id, name, email);
+                if (resp) {
                     Toast.makeText(Profile.this, "El correo se actualizo correctamente.", Toast.LENGTH_LONG).show();
+                    dbUser.updateUserPrefDataByID(id);
+                    fetchUserData();
                 } else{
                     Toast.makeText(Profile.this, "En este momento no se puede actualizar el correo.", Toast.LENGTH_LONG).show();
                 }
@@ -156,6 +158,15 @@ public class Profile extends AppCompatActivity {
 
     }
 
+    public void fetchUserData(){
+        this.sharedPreferences = getSharedPreferences(Login.USER_PREF_NAME, MODE_PRIVATE);
+        this.name = this.sharedPreferences.getString(Login.KEY_NAME, null);
+        this.email = this.sharedPreferences.getString(Login.KEY_EMAIL, null);
+        this.textEmail.setText(this.email);
+        this.textName.setText(this.name);
+        this.id = this.sharedPreferences.getString(Login.KEY_ID, null);
+    }
+
     public void expandirInputsName(View view) {
         int v = (inputNames.getVisibility()== View.GONE)? view.VISIBLE: view.GONE;
         TransitionManager.beginDelayedTransition(inputNames, new AutoTransition());
@@ -200,29 +211,5 @@ public class Profile extends AppCompatActivity {
 
         this.nameInputLayout.setError(null);
         return true;
-    }
-
-    private boolean validateLastName(){
-        String lastName = this.lastNameInputLayout.getEditText().getText().toString().trim();
-
-        if(lastName.isEmpty()){
-            this.lastNameInputLayout.setError("La contraseña es obligatoria");
-            return false;
-        }
-
-        if(lastName.length() < 3 || lastName.matches(".*\\d.*")){
-            this.lastNameInputLayout.setError("Ingrese un apellido valido.");
-            return false;
-        }
-
-        this.lastNameInputLayout.setError(null);
-        return true;
-    }
-
-    public boolean validateInputs(){
-        boolean isEmailValid = validateEmail();
-        boolean isNameValid = validateName();
-        // boolean isLastNameValid = validateLastName();
-        return isEmailValid && isNameValid; //&& isLastNameValid;
     }
 }
