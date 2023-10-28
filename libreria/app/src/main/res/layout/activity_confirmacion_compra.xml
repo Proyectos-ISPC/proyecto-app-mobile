@@ -151,8 +151,7 @@
             android:layout_weight="2"
             android:contentDescription="Compra realizada"
             app:srcCompat="@drawable/compra_realizada"
-            app:tint="@color/color1" />
-        <!-- app:tint="@color/colorViolet" -->
+            app:tint="@color/paymentAproved" />
     </LinearLayout>
 
     <ImageView
