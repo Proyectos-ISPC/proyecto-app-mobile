@@ -29,18 +29,54 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         createUserTable(sqLiteDatabase);
+        createSaleTable(sqLiteDatabase);
+        createDeliveryTable(sqLiteDatabase);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_USER);
+        sqLiteDatabase.execSQL("DROP TABLE delivery");
+        sqLiteDatabase.execSQL("DROP TABLE sale");
         onCreate(sqLiteDatabase);
+        createSaleTable(sqLiteDatabase);
+        createDeliveryTable(sqLiteDatabase);
     }
 
 
     private void createUserTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USER + " (" +
                 ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + " phone TEXT)");
+    }
+
+    private void createSaleTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL(
+                "CREATE TABLE sale (" +
+                        "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                        "total_cost DECIMAL(10,2) NOT NULL, " +
+                        "total_quantity INTEGER NOT NULL, " +
+                        "payment_type VARCHAR(20) NOT NULL, " +
+                        "delivery_type VARCHAR(20) NOT NULL, " +
+                        "sale_date DATE, user_id INTEGER, " +
+                        "user_id INTEGER NOT NULL," +
+                        "FOREIGN KEY (user_id) REFERENCES sale(id)" +
+                        "ON DELETE CASCADE)");
+    }
+
+    private void createDeliveryTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL(
+                "CREATE TABLE delivery(" +
+                        "id PRIMARY KEY AUTOINCREMENT, " +
+                        "street VARCHAR(40) NOT NULL, " +
+                        "number INTEGER NOT NULL, " +
+                        "postalcode VARCCHAR(10) NOT NULL, " +
+                        "status VARCHAR(20) NOT NULL, " +
+                        "sale_id INTEGER NOT NULL, " +
+                        "fullname VARCHAR(100) NOT NULL, " +
+                        "tel VARCHAR(45) NOT NULL, " +
+                        "email VARCHAR(60) NOT NULL, " +
+                        "FOREIGN KEY (sale_id) REFERENCES sale(id)" +
+                        "ON DELETE CASCADE)");
     }
 }

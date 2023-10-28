@@ -258,14 +258,15 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="297dp"
-        android:layout_height="135dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="314dp"
+        android:layout_height="401dp"
         android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.169">
 
         <LinearLayout
             android:id="@+id/itemacordeon"
