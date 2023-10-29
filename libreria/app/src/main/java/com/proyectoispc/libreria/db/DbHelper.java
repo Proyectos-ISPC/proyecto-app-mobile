@@ -13,6 +13,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String TABLE_USER = "t_user";
     public static final String TABLE_SALE = "t_sale";
     public static final String TABLE_DELIVERY = "t_delivery";
+    public static final String TABLE_PAYMENT = "t_payment";
 
 
     private static final String ID = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
@@ -38,10 +39,19 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String ID_DELIVERY = "id_delivery INTEGER PRIMARY KEY AUTOINCREMENT,";
     private static final String MAIL = "email VARCHAR(20) NOT NULL,";
     private static final String TELEPHONE = "phone VARCHAR(20) NOT NULL,";
-    private static final String STREET = "street VARCHAR(20) NULL,";
-    private static final String POSTALCODE = "postalcode VARCHAR(20) NULL,";
-    private static final String LOCATION = "location VARCHAR(20) NULL,";
-    private static final String PROVINCE = "province VARCHAR(20) NULL,";
+    private static final String STREET = "street VARCHAR(40) NULL,";
+    private static final String POSTALCODE = "postalcode VARCHAR(40) NULL,";
+    private static final String LOCATION = "location VARCHAR(40) NULL,";
+    private static final String PROVINCE = "province VARCHAR(40) NULL,";
+
+    //Atributos tabla PAYMENT
+
+    private static final String ID_PAYMENT = "id_payment INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String NAME_CARD = "name_card VARCHAR(40) NULL,";
+    private static final String CVV = "cvv VARCHAR(3) NULL,";
+    private static final String CARD_NUMBER = "card_number VARCHAR(20) NULL,";
+    private static final String EXPIRATION_DATE = "expiration_date VARCHAR(5) NULL,";
+
 
     public DbHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -52,6 +62,7 @@ public class DbHelper extends SQLiteOpenHelper {
         createUserTable(sqLiteDatabase);
         createSaleTable(sqLiteDatabase);
         createDeliveryTable(sqLiteDatabase);
+        createPaymentTable(sqLiteDatabase);
     }
 
     @Override
@@ -59,6 +70,7 @@ public class DbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_USER);
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_SALE);
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_DELIVERY);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PAYMENT);
         onCreate(sqLiteDatabase);
     }
 
@@ -76,5 +88,9 @@ public class DbHelper extends SQLiteOpenHelper {
     private void createDeliveryTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_DELIVERY + " (" +
                 ID_DELIVERY + MAIL + TELEPHONE + STREET + POSTALCODE + LOCATION + PROVINCE + ", FOREIGN KEY(sale_id) REFERENCES " + TABLE_SALE + "(ID_SALE))");
+    }
+    private void createPaymentTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_PAYMENT + " (" +
+                ID_PAYMENT + NAME_CARD + CVV + CARD_NUMBER + EXPIRATION_DATE + ", FOREIGN KEY(sale_id) REFERENCES " + TABLE_SALE + "(ID_SALE))");
     }
 }
