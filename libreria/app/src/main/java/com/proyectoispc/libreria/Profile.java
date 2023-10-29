@@ -3,6 +3,8 @@ package com.proyectoispc.libreria;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,12 +25,12 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.proyectoispc.libreria.db.DbUser;
 
 public class Profile extends AppCompatActivity {
-    ImageButton backbutton;
-    ImageButton carrito;
+    ImageButton backbutton, carrito, deleteButton ;
     LinearLayout inputNames;
     LinearLayout inputEmail;
     TextView textName, textEmail;
     String id, email, name;
+    Boolean account_status;
     TextInputLayout emailInputLayout, nameInputLayout;
     SharedPreferences sharedPreferences;
     EditText emailInput, nameInput;
@@ -58,6 +60,7 @@ public class Profile extends AppCompatActivity {
         nameInput = nameInputLayout.getEditText();
         buttonNames = findViewById(R.id.buttonNames);
         buttonEmail = findViewById(R.id.buttonEmail);
+        deleteButton = findViewById(R.id.delete);
 
         // Conexion con BBDD
         dbUser = new DbUser(this);
@@ -71,7 +74,7 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                boolean resp = dbUser.updateUserInfo(id, name, email);
+                boolean resp = dbUser.updateUserInfo(id, name, email, account_status);
                 if (resp) {
                     Toast.makeText(Profile.this, "El nombre se actualizo correctamente.", Toast.LENGTH_LONG).show();
                     dbUser.updateUserPrefDataByID(id);
@@ -92,7 +95,7 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                boolean resp = dbUser.updateUserInfo(id, name, email);
+                boolean resp = dbUser.updateUserInfo(id, name, email, account_status);
                 if (resp) {
                     Toast.makeText(Profile.this, "El correo se actualizo correctamente.", Toast.LENGTH_LONG).show();
                     dbUser.updateUserPrefDataByID(id);
@@ -103,6 +106,15 @@ public class Profile extends AppCompatActivity {
 
             }
         });
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showConfirmationDialog();
+            }
+        });
+
+
 
         // Navegabilidad de los botones superiores
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -211,5 +223,37 @@ public class Profile extends AppCompatActivity {
 
         this.nameInputLayout.setError(null);
         return true;
+    }
+
+    public void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Profile.this);
+        builder.setTitle("Confirmación");
+        builder.setMessage("¿Estás seguro de que deseas eliminar tu cuenta?");
+
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                boolean success = dbUser.updateUserInfo(id, name, email, false);
+                if (success) {
+                    Toast.makeText(Profile.this, "Tu cuenta ha sido deshabilitada.", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                    startActivity(new Intent(getApplicationContext(), Register.class));
+                    overridePendingTransition(0, 0);
+                } else {
+                    Toast.makeText(Profile.this, "No se pudo deshabilitar la cuenta en este momento.", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            }
+        });
+
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

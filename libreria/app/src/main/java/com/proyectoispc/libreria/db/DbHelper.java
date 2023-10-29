@@ -21,6 +21,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String DNI = " dni TEXT,";
     private static final String ADDRESS = " address TEXT,";
     private static final String PHONE = " phone TEXT,";
+    private static final String ACCOUNT_STATUS = "account_status BOOLEAN,";
 
     public DbHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -41,6 +42,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private void createUserTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USER + " (" +
-                ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + " phone TEXT)");
+                ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + ACCOUNT_STATUS + " phone TEXT)");
     }
 }
