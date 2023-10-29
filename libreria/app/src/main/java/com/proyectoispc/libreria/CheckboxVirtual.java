@@ -1,6 +1,7 @@
 package com.proyectoispc.libreria;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -9,21 +10,63 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.proyectoispc.libreria.db.DbSale;
+import com.proyectoispc.libreria.db.DbUser;
+import com.proyectoispc.libreria.service.ShoppingCartService;
+
+import java.util.Date;
 
 
 public class CheckboxVirtual extends AppCompatActivity {
+
+    SharedPreferences sharedPreferences;
+    int userId;
+
+    ShoppingCartService shoppingCartService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pago);
 
+        this.sharedPreferences = getSharedPreferences(Login.USER_PREF_NAME, MODE_PRIVATE);
+        this.userId = this.sharedPreferences.getInt(Login.KEY_ID, 0);
+
+        shoppingCartService = ShoppingCartService.getInstance();
+
         CheckBox checkBoxPagoVirtual = findViewById(R.id.checkBoxPagoVirtual);
         EditText nombreCompleto = findViewById(R.id.editTextNombreCompleto);
         EditText numeroTarjeta = findViewById(R.id.editTextNumeroTarjeta);
         EditText fechaExpiracion = findViewById(R.id.editTextFechaExpiracion);
         EditText codigoSeguridad = findViewById(R.id.editTextCodigoSeguridad);
+
+        ImageButton imagenFlecha = findViewById(R.id.backButton);
+        ImageButton imagenCarrito = findViewById(R.id.shoppingCartButton);
+        Button botonAtras = findViewById(R.id.botonAtras);
+
+        botonAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        imagenFlecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        imagenCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
 
         checkBoxPagoVirtual.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -80,6 +123,9 @@ public class CheckboxVirtual extends AppCompatActivity {
                     fechaExpiracion.setError("Ingrese una fecha de expiración válida (MM/YY).");
                     return;
                 }
+
+                DbSale dbSale = new DbSale(CheckboxVirtual.this);
+                dbSale.insertSale(userId, shoppingCartService.getTotalAmount(), shoppingCartService.getTotalQuantity(), "virtual", "mail", shoppingCartService.getBookId(), new Date().toString());
 
                 startActivity(new Intent(getApplicationContext(), ConfirmacionCompra.class));
                 overridePendingTransition(0,0);

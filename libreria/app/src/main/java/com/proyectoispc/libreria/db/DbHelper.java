@@ -39,7 +39,9 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String TOTAL_QUANTITY = " total_quantity INTEGER,";
     private static final String PAYMENT_TYPE = " payment_type VARCHAR(20),";
     private static final String DELIVERY_TYPE = " delivery_type VARCHAR(20),";
-    private static final String SALE_DATE = " sale_date date";
+    private static final String SALE_DATE = " sale_date TEXT";
+
+    private static final String BOOK_ID = " book_id INTEGER,";
 
     //Atributos tabla DELIVERY
 
@@ -85,7 +87,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private void createSaleTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_SALE + " (" +
-                ID_SALE + USER_ID + TOTAL_COST + TOTAL_QUANTITY + PAYMENT_TYPE + DELIVERY_TYPE + SALE_DATE+")");
+                ID_SALE + USER_ID + TOTAL_COST + TOTAL_QUANTITY + PAYMENT_TYPE + DELIVERY_TYPE + BOOK_ID + SALE_DATE + ")");
     }
 
     private void createDeliveryTable(SQLiteDatabase sqLiteDatabase) {

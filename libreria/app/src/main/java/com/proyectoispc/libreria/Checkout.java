@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -29,8 +30,16 @@ public class Checkout extends AppCompatActivity {
 
         goToPurchase = findViewById(R.id.botonPagar);
 
-        ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
-        ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
+        ImageButton imagenFlecha = findViewById(R.id.backButton);
+        ImageButton imagenCarrito = findViewById(R.id.shoppingCartButton);
+        Button botonVolver = findViewById(R.id.botonVolver);
+
+        botonVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         imagenFlecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

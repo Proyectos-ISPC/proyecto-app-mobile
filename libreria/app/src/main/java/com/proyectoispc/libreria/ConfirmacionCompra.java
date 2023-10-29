@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,8 +26,8 @@ public class ConfirmacionCompra extends AppCompatActivity {
         // Set Home selected
         bottomNavigationView.setSelectedItemId(R.id.contact);
 
-        ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
-        ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
+        ImageButton imagenFlecha = findViewById(R.id.backButton);
+        ImageButton imagenCarrito = findViewById(R.id.shoppingCartButton);
 
         imagenFlecha.setOnClickListener(new View.OnClickListener() {
             @Override

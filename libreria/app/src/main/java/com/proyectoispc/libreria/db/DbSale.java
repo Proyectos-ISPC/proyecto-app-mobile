@@ -12,7 +12,7 @@ public class DbSale extends DbHelper {
         this.context = context;
     }
 
-    public Long insertSale(String total_cost, Integer total_quantity, String payment_type, String delivery_type, String sale_date){
+    public Long insertSale(int user_id, double total_cost, int total_quantity, String payment_type, String delivery_type, int bookId , String sale_date){
         long id_sale = 0;
         try {
             DbHelper dbHelper = new DbHelper(context);
@@ -20,10 +20,12 @@ public class DbSale extends DbHelper {
 
             ContentValues values = new ContentValues();
 
+            values.put("user_id", user_id);
             values.put("total_cost", total_cost);
             values.put("total_quantity", total_quantity);
             values.put("payment_type", payment_type);
             values.put("delivery_type", delivery_type);
+            values.put("book_id", delivery_type);
             values.put("sale_date", sale_date);
 
             id_sale = db.insert(TABLE_SALE, null, values);
