@@ -1,0 +1,121 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F9F8">
+
+
+        <ImageView
+            android:id="@+id/fondoBlanco1"
+            android:layout_width="320dp"
+            android:layout_height="109dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/boton_redondeado_blanco" />
+
+        <TextView
+            android:id="@+id/cardBookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="35dp"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="#538DCC"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
+            app:layout_constraintStart_toEndOf="@+id/cardImageProduct" />
+
+        <ImageView
+            android:id="@+id/agregar1"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/cardTotalCuantity"
+            app:layout_constraintTop_toBottomOf="@+id/eliminar1"
+            app:srcCompat="@drawable/icono_suma" />
+
+        <ImageView
+            android:id="@+id/quitar1"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/fondoBlanco1"
+            app:layout_constraintTop_toBottomOf="@+id/eliminar1"
+            app:srcCompat="@drawable/icono_menos" />
+
+        <TextView
+            android:id="@+id/cardTotalCuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/rubik"
+            android:text="1"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/quitar1"
+            app:layout_constraintTop_toBottomOf="@+id/eliminar1" />
+
+        <TextView
+            android:id="@+id/cardBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/rubik"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/cardImageProduct"
+            app:layout_constraintTop_toBottomOf="@+id/cardBookName" />
+
+        <ImageView
+            android:id="@+id/eliminar1"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/fondoBlanco1"
+            app:layout_constraintTop_toTopOf="@+id/fondoBlanco1"
+            app:srcCompat="@drawable/icono_papelera" />
+
+        <TextView
+            android:id="@+id/cardBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/rubik_bold"
+            android:textColor="#041E41"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/cardImageProduct"
+            app:layout_constraintTop_toTopOf="@+id/fondoBlanco1" />
+
+        <ImageView
+            android:id="@+id/cardImageProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
+            app:layout_constraintStart_toStartOf="@+id/fondoBlanco1"
+            app:layout_constraintTop_toTopOf="@+id/fondoBlanco1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="95dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
