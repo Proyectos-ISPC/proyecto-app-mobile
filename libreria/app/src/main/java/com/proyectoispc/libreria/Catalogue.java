@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -54,5 +55,10 @@ public class Catalogue extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void book_detail(View view) {
+        Intent intent = new Intent(this, BookDetail.class);
+        startActivity(intent);
     }
 }

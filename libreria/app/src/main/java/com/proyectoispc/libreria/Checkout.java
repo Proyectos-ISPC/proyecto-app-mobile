@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class checkout extends AppCompatActivity {
+public class Checkout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,13 +74,13 @@ public class checkout extends AppCompatActivity {
 
     }
 
-    public void volver(View view) {
-        Intent intent = new Intent(this, Carrito.class);
+    public void irapagar(View view) {
+        Intent intent = new Intent(this, Pago.class);
         startActivity(intent);
     }
 
-    public void pagar(View view) {
-        Intent intent = new Intent(this, Pago.class);
+    public void volverAtras(View view) {
+        Intent intent = new Intent(this, Carrito.class);
         startActivity(intent);
     }
 }

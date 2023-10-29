@@ -77,8 +77,8 @@ public class ConfirmacionCompra extends AppCompatActivity {
 
     }
 
-    public void launchCarrito(View view) {
-        Intent intent = new Intent(this, Carrito.class);
+    public void launchCatalogo(View view) {
+        Intent intent = new Intent(this, Catalogue.class);
         startActivity(intent);
     }
 }

@@ -4,7 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F9F8">
+    android:background="#F7F9F8"
+    tools:context=".Carrito">
+
+    <TextView
+        android:id="@+id/miCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="285dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Mi carrito"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <ImageView
+        android:id="@+id/imagenFlecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/imagenCarrito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419"
+        app:srcCompat="@drawable/icono_flecha_izq" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -264,6 +293,7 @@
         android:layout_height="59dp"
         android:backgroundTint="#538DCC"
         android:fontFamily="@font/rubik"
+        android:onClick="iniciarCompra"
         android:text="Iniciar compra"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
@@ -282,36 +312,8 @@
         app:layout_constraintStart_toEndOf="@+id/totalTexto"
         app:layout_constraintTop_toTopOf="@+id/fondoBlancoTotal" />
 
-    <TextView
-        android:id="@+id/miCarrito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="285dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="Mi carrito"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
     <ImageView
-        android:id="@+id/imagenFlecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/carrito"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419"
-        app:srcCompat="@drawable/icono_flecha_izq" />
-
-    <ImageView
-        android:id="@+id/carrito"
+        android:id="@+id/imagenCarrito"
         android:layout_width="29dp"
         android:layout_height="32dp"
         android:layout_marginStart="120dp"
@@ -321,7 +323,7 @@
         app:layout_constraintStart_toEndOf="@+id/imagenFlecha"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@mipmap/icono_carrito" />
+        app:srcCompat="@drawable/shoppingcarticon" />
 
     <ImageView
         android:id="@+id/fondoBlanco1"

@@ -19,7 +19,7 @@
             android:name=".feedbackerrorbusqueda"
             android:exported="false" />
         <activity
-            android:name=".checkout"
+            android:name=".Checkout"
             android:exported="false" />
         <activity
             android:name=".Profile"
@@ -47,6 +47,12 @@
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Pago"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmacionCompra"
             android:exported="false" />
         <activity
             android:name=".Register"

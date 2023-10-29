@@ -61,4 +61,9 @@ public class Carrito extends AppCompatActivity {
             }
         });
     }
+
+    public void iniciarCompra(View view) {
+        Intent intent = new Intent(this, Checkout.class);
+        startActivity(intent);
+    }
 }

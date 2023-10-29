@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F7F9F8"
+    tools:context=".Pago">
 
-    <!-- Checkbox para Pago Virtual -->
+<!-- Checkbox para Pago Virtual -->
 
     <!-- Logos de tarjetas -->
 
@@ -356,7 +357,7 @@
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginTop="36dp"
-        android:onClick="confirmarCompra"
+        android:onClick="confirmar_compra"
         android:text="@string/btn_confirmacion"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"

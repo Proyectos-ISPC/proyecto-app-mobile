@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F9F8"
     tools:context=".ConfirmacionCompra">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -261,7 +262,7 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="#538DCC"
         android:fontFamily="@font/rubik"
-        android:onClick="launchCarrito"
+        android:onClick="launchCatalogo"
         android:text="Volver al catálogo"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"

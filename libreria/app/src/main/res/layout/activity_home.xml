@@ -128,32 +128,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageLibro2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="36dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        android:onClick="book_detail"
+        app:layout_constraintStart_toEndOf="@+id/imageLibro1"
         app:layout_constraintTop_toBottomOf="@+id/tvRecomendadosLabel"
         app:srcCompat="@drawable/sanar_la_herida" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageLibro3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.728"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/imageLibro2"
         app:layout_constraintTop_toBottomOf="@+id/tvRecomendadosLabel"
         app:srcCompat="@drawable/todo_por_volver" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageLibro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
+        android:onClick="book_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRecomendadosLabel"
         app:srcCompat="@drawable/todo_por_volverte_a_ver" />
@@ -164,9 +167,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
+        android:onClick="book_detail"
         android:text="Sanar la herida"
         app:layout_constraintStart_toEndOf="@+id/tvTituloTodoPor"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLibro2" />
 
     <TextView
         android:id="@+id/textView5"
@@ -196,9 +200,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
+        android:onClick="book_detail"
         android:text="Todo por volver"
         app:layout_constraintStart_toEndOf="@+id/tvSanarTitulo"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLibro3" />
 
     <TextView
         android:id="@+id/tvAutorFlor"
@@ -271,10 +276,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
+        android:onClick="book_detail"
         android:text="Todo por volver a verte"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLibro1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -290,7 +296,7 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imageLibro4"
         android:layout_width="81dp"
         android:layout_height="118dp"
         android:layout_marginStart="20dp"
@@ -309,7 +315,7 @@
         android:layout_marginTop="5dp"
         android:text="Heartstopper"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+        app:layout_constraintTop_toBottomOf="@+id/imageLibro4" />
 
     <TextView
         android:id="@+id/textView19"

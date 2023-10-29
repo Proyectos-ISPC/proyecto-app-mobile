@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".checkout">
+    android:background="#F7F9F8"
+    tools:context=".Checkout">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -355,7 +356,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/blue_soft"
-        android:onClick="pagar"
+        android:onClick="irapagar"
         android:text="@string/button_irPagar_chackout"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -369,7 +370,7 @@
         android:layout_marginStart="116dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/white"
-        android:onClick="volver"
+        android:onClick="volverAtras"
         android:text="@string/button_volver_chackout"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"

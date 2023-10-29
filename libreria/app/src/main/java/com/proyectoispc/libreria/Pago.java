@@ -74,13 +74,13 @@ public class Pago extends AppCompatActivity {
         });
 
     }
-    public void confirmarCompra(View view) {
+    public void confirmar_compra(View view) {
         Intent intent = new Intent(this, ConfirmacionCompra.class);
         startActivity(intent);
     }
 
     public void regresar(View view) {
-        Intent intent = new Intent(this, checkout.class);
+        Intent intent = new Intent(this, Checkout.class);
         startActivity(intent);
     }
 }
