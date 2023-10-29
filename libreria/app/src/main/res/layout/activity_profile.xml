@@ -8,16 +8,16 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="102dp"
-        android:layout_height="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/atkinsonhyperlegibleregular"
-        android:text="Mi Cuenta"
+        android:text="@string/micuenta"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toEndOf="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:inputType="text"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -100,7 +100,7 @@
         android:id="@+id/email"
         android:layout_width="261dp"
         android:layout_height="30dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/atkinsonhyperlegibleregular"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:inputType="text"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -169,12 +169,14 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/edit_name"
         android:onClick="expandirInputsName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintHorizontal_bias="0.683"
         app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:srcCompat="@drawable/editpencil" />
@@ -182,9 +184,10 @@
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
+        android:contentDescription="@string/btn_volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,10 +196,11 @@
 
     <ImageButton
         android:id="@+id/imageButton9"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
+        android:contentDescription="@string/go_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,12 +210,14 @@
 
     <ImageButton
         android:id="@+id/imageButton11"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/edit_email"
         android:onClick="expandirInputEmail"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/inputNames"
         app:srcCompat="@drawable/editpencil" />
@@ -237,6 +243,6 @@
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
