@@ -49,4 +49,18 @@ public class ShoppingCartService {
         }
         return total;
     }
+
+    public int getTotalQuantity() {
+        int total = 0;
+        for (SelectedBook element: this.selectedBooks) {
+            total +=  element.getCuantity();
+        }
+        return total;
+    }
+
+    public int getBookId() {
+        return this.selectedBooks.get(0).getBook().getId();
+    }
+
+
 }

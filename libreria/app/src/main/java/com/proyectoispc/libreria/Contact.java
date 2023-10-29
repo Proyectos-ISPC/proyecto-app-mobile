@@ -4,45 +4,45 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.textfield.TextInputLayout;
 import com.proyectoispc.libreria.db.DbContact;
-import com.proyectoispc.libreria.db.DbHelper;
 
 public class Contact extends AppCompatActivity {
 
-    EditText txtMessage;
-
-    Button enviarButton;
+    Button enviarMensajeButton;
+    EditText nameInput; // Declare nameInput here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-        txtMessage = findViewById(R.id.message);
 
-        enviarButton = findViewById(R.id.button);
+        // Initialize and assign variable
+        BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
 
-        enviarButton.setOnClickListener(new View.OnClickListener() {
+        // Set Home selected
+        bottomNavigationView.setSelectedItemId(R.id.contact);
+
+        ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
+        ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
+        enviarMensajeButton = findViewById(R.id.enviarMensajeButton);
+        TextInputLayout messageLayout = findViewById(R.id.messageLayout);
+        nameInput = messageLayout.getEditText(); // Initialize nameInput here
+
+        enviarMensajeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DbHelper dbHelper = new DbHelper(Contact.this);
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                if (db != null) {
-                    Toast.makeText(Contact.this, "Base de datos creada", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(Contact.this, "Error al crear Base de Datos", Toast.LENGTH_LONG).show();
-                }
-
                 DbContact dbContact  = new DbContact(Contact.this);
-                long id = dbContact.insertarContact(txtMessage.getText().toString());
+                long id = dbContact.insertarContact(nameInput.getText().toString());
 
                 if (id > 0)  {
                     Toast.makeText(Contact.this, "Registro Guardado", Toast.LENGTH_LONG).show();
@@ -52,9 +52,21 @@ public class Contact extends AppCompatActivity {
                 }
             }
         });
+        imagenFlecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
-        bottomNavigationView.setSelectedItemId(R.id.contact);
+        imagenCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
+
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -87,10 +99,8 @@ public class Contact extends AppCompatActivity {
             }
         });
 
-
     }
-
     private void limpiar() {
-        txtMessage.setText("");
+        nameInput.setText("");
     }
 }
