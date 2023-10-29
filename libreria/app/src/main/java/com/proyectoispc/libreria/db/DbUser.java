@@ -7,8 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.Nullable;
 import android.database.Cursor;
 
-import com.proyectoispc.libreria.Login;
-
 
 public class DbUser extends DbHelper {
 
