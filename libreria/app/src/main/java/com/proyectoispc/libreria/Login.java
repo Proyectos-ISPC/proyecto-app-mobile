@@ -125,7 +125,7 @@ public class Login extends AppCompatActivity {
 
         if(userData.moveToFirst()){
             SharedPreferences.Editor editor = this.sharedPreferences.edit();
-            editor.putString(KEY_ID, userData.getString (0));
+            editor.putInt(KEY_ID, userData.getInt(0));
             editor.putString(KEY_NAME, userData.getString (3));
             editor.putString(KEY_EMAIL, userData.getString (1));
             editor.apply();

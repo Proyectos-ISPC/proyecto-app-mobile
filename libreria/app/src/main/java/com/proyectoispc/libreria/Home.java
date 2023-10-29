@@ -21,6 +21,7 @@ import com.proyectoispc.libreria.models.Book;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Home extends AppCompatActivity {
 
@@ -42,8 +43,6 @@ public class Home extends AppCompatActivity {
         List<Book> recomendedBooks = getRecomendedBooks();
         ProductAdapter adapter = new ProductAdapter(this ,recomendedBooks);
         recyclerView.setAdapter(adapter);
-
-
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
@@ -120,11 +119,11 @@ public class Home extends AppCompatActivity {
             recomendedBooks.add(book);
         }
 
+        recomendedBooks = recomendedBooks.stream()
+                .filter(book -> "recomended".equals(book.getTag()))
+                .collect(Collectors.toList());
+
         return recomendedBooks;
     }
 
-    public void book_detail(View view) {
-        Intent intent = new Intent(this, BookDetail.class);
-        startActivity(intent);
-    }
 }
