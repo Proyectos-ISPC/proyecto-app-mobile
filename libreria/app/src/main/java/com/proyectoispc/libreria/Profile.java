@@ -240,7 +240,7 @@ public class Profile extends AppCompatActivity {
                     int id = cursor.getInt(0);
                     Double total_cost = cursor.getDouble(1);
                     Long date = cursor.getLong(2);
-                    String status = cursor.getString(4);
+                    String status = cursor.getString(3);
 
                     // Crear un CardView para el acordeón
                     CardView accordionCardView = new CardView(this);
