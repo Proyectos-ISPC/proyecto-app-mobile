@@ -38,6 +38,7 @@ public class DbUser extends DbHelper {
             values.put("name", name);
             values.put("email", email);
             values.put("password", password);
+            values.put("account_status", true);
 
             id = db.insert(TABLE_USER, null, values);
         } catch (Exception e) {
@@ -84,7 +85,7 @@ public class DbUser extends DbHelper {
         return cursor;
     }
 
-    public boolean updateUserInfo(String id, String name, String email){
+    public boolean updateUserInfo(String id, String name, String email, Boolean accountStatus){
         boolean updateSuccesfull;
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -92,6 +93,7 @@ public class DbUser extends DbHelper {
 
         userData.put("name", name);
         userData.put("email", email);
+        userData.put("account_status", accountStatus);
 
         int cant = db.update("t_user", userData,"id='"+id+"'",null);
         db.close();
@@ -112,4 +114,6 @@ public class DbUser extends DbHelper {
             editor.apply();
         }
     }
+
+
 }
