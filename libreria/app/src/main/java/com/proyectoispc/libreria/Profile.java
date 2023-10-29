@@ -273,14 +273,20 @@ public class Profile extends AppCompatActivity {
                     // Agregar el CardView al contenedor
                     accordionContainer.addView(accordionCardView);
                 } while (cursor.moveToNext());
+            }else{
+                // Informar que no hay productos comprados.
+                LinearLayout accordionContainer = findViewById(R.id.accordionContainer);
+                TextView voidTextView = new TextView(this);
+                voidTextView.setText("No hay registro de una compra realizada.");
+                accordionContainer.addView(voidTextView);
             }
             cursor.close();
         } else {
             // Informar que no hay productos comprados.
             LinearLayout accordionContainer = findViewById(R.id.accordionContainer);
-            TextView voidTextView = new TextView(this);
-            voidTextView.setText("No hay registros para mostrar");
-            accordionContainer.addView(voidTextView);
+            TextView errorTextView = new TextView(this);
+            errorTextView.setText("Error de datos.");
+            accordionContainer.addView(errorTextView);
         }
     }
 }
