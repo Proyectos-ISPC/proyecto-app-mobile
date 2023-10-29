@@ -1,5 +1,6 @@
 package com.proyectoispc.libreria;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -44,7 +45,7 @@ public class CheckboxVirtual extends AppCompatActivity {
         });
 
         // Método de validación de datos
-        Button btnConfirmacion = findViewById(R.id.button3);
+        Button btnConfirmacion = findViewById(R.id.botonConfirmar);
         btnConfirmacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +80,9 @@ public class CheckboxVirtual extends AppCompatActivity {
                     fechaExpiracion.setError("Ingrese una fecha de expiración válida (MM/YY).");
                     return;
                 }
+
+                startActivity(new Intent(getApplicationContext(), ConfirmacionCompra.class));
+                overridePendingTransition(0,0);
             }
         });
 

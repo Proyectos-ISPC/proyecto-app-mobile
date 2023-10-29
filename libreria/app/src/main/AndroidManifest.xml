@@ -16,7 +16,7 @@
             android:name=".feedbackErrorBuscador"
             android:exported="false" />
         <activity
-            android:name=".feedbackerrorbusqueda"
+            android:name=".CheckboxVirtual"
             android:exported="false" />
         <activity
             android:name=".Checkout"

@@ -60,7 +60,6 @@ public class BookDetail extends AppCompatActivity {
         TextView textViewDescription = findViewById(R.id.textViewDescription);
         ImageView imageViewCover = findViewById(R.id.imageViewCover);
 
-
         textViewBookName.setText(bookName);
         textViewAuthor.setText(author);
         textViewPrice.setText("$ " + price);
@@ -100,10 +99,28 @@ public class BookDetail extends AppCompatActivity {
             }
         });
 
+        addBookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Book book = new Book(id, bookName, author, description, cover, price);
+                shoppingCartService.addBook(book);
+            }
+        });
+
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        shoppingCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
+
     }
 
-    public void agregar_carrito(View view) {
-        Intent intent = new Intent(this, Carrito.class);
-        startActivity(intent);
-    }
 }

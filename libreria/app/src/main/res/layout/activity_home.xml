@@ -159,60 +159,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvArteLabel" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:text="Fran Hints"
-        app:layout_constraintStart_toEndOf="@+id/tvAutorF"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/tvPrecioTodoPor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="$ 5.098,00"
-        android:textColor="@color/color2"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAutorFlor" />
-
-    <TextView
-        android:id="@+id/tvAutorF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
-        android:text="Florencia Vercellone"
-        app:layout_constraintStart_toEndOf="@+id/tvAutorFlor"
-        app:layout_constraintTop_toBottomOf="@+id/tvSanarTitulo" />
-
-    <TextView
-        android:id="@+id/tvPrecioSanar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="5dp"
-        android:text="$ 5.098,00"
-        android:textColor="@color/color2"
-        app:layout_constraintStart_toEndOf="@+id/tvPrecioTodoPor"
-        app:layout_constraintTop_toBottomOf="@+id/tvAutorF" />
-
-    <TextView
-        android:id="@+id/tvTituloTodoPor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="Todo por volver a verte"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"

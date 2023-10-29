@@ -7,11 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Checkout extends AppCompatActivity {
+
+    Button goToPurchase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,8 @@ public class Checkout extends AppCompatActivity {
 
         // Set Home selected
         bottomNavigationView.setSelectedItemId(R.id.contact);
+
+        goToPurchase = findViewById(R.id.botonPagar);
 
         ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
         ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
@@ -72,15 +78,14 @@ public class Checkout extends AppCompatActivity {
             }
         });
 
+        goToPurchase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), CheckboxVirtual.class));
+                overridePendingTransition(0,0);
+            }
+        });
+
     }
 
-    public void irapagar(View view) {
-        Intent intent = new Intent(this, Pago.class);
-        startActivity(intent);
-    }
-
-    public void volverAtras(View view) {
-        Intent intent = new Intent(this, Carrito.class);
-        startActivity(intent);
-    }
 }
