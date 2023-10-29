@@ -16,6 +16,9 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "library.db";
     public static final String TABLE_USER = "t_user";
     public static final String TABLE_BOOK = "t_book";
+    public static final String TABLE_SALE = "t_sale";
+    public static final String TABLE_DELIVERY = "t_delivery";
+    public static final String TABLE_PAYMENT = "t_payment";
 
 
     private static final String ID = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
@@ -26,8 +29,36 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String DNI = " dni TEXT,";
     private static final String ADDRESS = " address TEXT,";
     private static final String PHONE = " phone TEXT,";
-    private static final String ACCOUNT_STATUS = "account_status BOOLEAN,";
+    private static final String ACCOUNT_STATUS = " account_status BOOLEAN,";
     Context context_;
+
+//Atributos tabla SALE
+    private static final String ID_SALE = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String USER_ID = " user_id INTEGER,";
+    private static final String TOTAL_COST = " total_cost DECIMAL(10,2),";
+    private static final String TOTAL_QUANTITY = " total_quantity INTEGER,";
+    private static final String PAYMENT_TYPE = " payment_type VARCHAR(20),";
+    private static final String DELIVERY_TYPE = " delivery_type VARCHAR(20),";
+    private static final String SALE_DATE = " sale_date date";
+
+    //Atributos tabla DELIVERY
+
+    private static final String ID_DELIVERY = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String MAIL = " email VARCHAR(20),";
+    private static final String TELEPHONE = " phone VARCHAR(20),";
+    private static final String STREET = " street VARCHAR(40),";
+    private static final String POSTALCODE = " postalcode VARCHAR(40),";
+    private static final String LOCATION = " location VARCHAR(40),";
+    private static final String PROVINCE = " province VARCHAR(40),";
+
+    //Atributos tabla PAYMENT
+
+    private static final String ID_PAYMENT = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String NAME_CARD = " name_card VARCHAR(40),";
+    private static final String CVV = " cvv VARCHAR(3),";
+    private static final String CARD_NUMBER = " card_number VARCHAR(20),";
+    private static final String EXPIRATION_DATE = " expiration_date VARCHAR(5),";
+
 
     public DbHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -38,13 +69,32 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         createUserTable(sqLiteDatabase);
         createBookTable(sqLiteDatabase);
-
+        createSaleTable(sqLiteDatabase);
+        createDeliveryTable(sqLiteDatabase);
+        createPaymentTable(sqLiteDatabase);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_USER);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_SALE);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_DELIVERY);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PAYMENT);
         onCreate(sqLiteDatabase);
+    }
+
+    private void createSaleTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_SALE + " (" +
+                ID_SALE + USER_ID + TOTAL_COST + TOTAL_QUANTITY + PAYMENT_TYPE + DELIVERY_TYPE + SALE_DATE+")");
+    }
+
+    private void createDeliveryTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_DELIVERY + " (" +
+                ID_DELIVERY + MAIL + TELEPHONE + STREET + POSTALCODE + LOCATION + PROVINCE + " sale_id TEXT)");
+    }
+    private void createPaymentTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_PAYMENT + " (" +
+                ID_PAYMENT + NAME_CARD + CVV + CARD_NUMBER + EXPIRATION_DATE + " sale_id TEXT)");
     }
 
 

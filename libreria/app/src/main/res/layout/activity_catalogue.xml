@@ -112,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
+        android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,11 +120,12 @@
         app:srcCompat="@drawable/sanar_la_herida" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textLibro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
+        android:onClick="book_detail"
         android:text="Sanar la herida"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -136,7 +138,7 @@
         android:layout_marginTop="5dp"
         android:text="Florencia H."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textLibro1" />
 
     <TextView
         android:id="@+id/textView11"
@@ -154,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
@@ -161,11 +164,12 @@
         app:srcCompat="@drawable/todo_por_volver" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textLibro2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="155dp"
         android:layout_marginTop="5dp"
+        android:onClick="book_detail"
         android:text="Dorothy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
@@ -189,13 +193,14 @@
         android:layout_marginTop="5dp"
         android:text="Laura F."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textLibro2" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
@@ -203,11 +208,12 @@
         app:srcCompat="@drawable/todo_por_volverte_a_ver" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textLibro3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
+        android:onClick="book_detail"
         android:text="Todo por volver a verte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
@@ -220,7 +226,7 @@
         android:layout_marginEnd="75dp"
         android:text="Emilia Evans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/textLibro3" />
 
     <TextView
         android:id="@+id/textView17"

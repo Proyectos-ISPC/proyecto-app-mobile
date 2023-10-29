@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.proyectoispc.libreria.models.Book;
@@ -59,7 +60,6 @@ public class BookDetail extends AppCompatActivity {
         TextView textViewDescription = findViewById(R.id.textViewDescription);
         ImageView imageViewCover = findViewById(R.id.imageViewCover);
 
-
         textViewBookName.setText(bookName);
         textViewAuthor.setText(author);
         textViewPrice.setText("$ " + price);
@@ -99,6 +99,14 @@ public class BookDetail extends AppCompatActivity {
             }
         });
 
+        addBookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Book book = new Book(id, bookName, author, description, cover, price);
+                shoppingCartService.addBook(book);
+            }
+        });
+
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,15 +117,7 @@ public class BookDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Carrito.class));
-                overridePendingTransition(0, 0);
-            }
-        });
-
-        addBookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Book book = new Book(id, bookName, author, description, cover, price);
-                shoppingCartService.addBook(book);
+                overridePendingTransition(0,0);
             }
         });
 

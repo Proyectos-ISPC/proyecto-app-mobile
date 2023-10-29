@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.proyectoispc.libreria.adapter.ProductAdapter;
@@ -120,5 +121,10 @@ public class Home extends AppCompatActivity {
         }
 
         return recomendedBooks;
+    }
+
+    public void book_detail(View view) {
+        Intent intent = new Intent(this, BookDetail.class);
+        startActivity(intent);
     }
 }

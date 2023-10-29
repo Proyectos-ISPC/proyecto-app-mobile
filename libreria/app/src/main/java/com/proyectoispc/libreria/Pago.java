@@ -7,21 +7,39 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Catalogue extends AppCompatActivity {
+public class Pago extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catalogue);
+        setContentView(R.layout.activity_pago);
 
         // Initialize and assign variable
         BottomNavigationView bottomNavigationView=findViewById(R.id.nav_view);
 
         // Set Home selected
-        bottomNavigationView.setSelectedItemId(R.id.catalogue);
+        bottomNavigationView.setSelectedItemId(R.id.contact);
+
+        ImageView imagenFlecha = findViewById(R.id.imagenFlecha);
+        ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
+        imagenFlecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        imagenCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Carrito.class));
+                overridePendingTransition(0,0);
+            }
+        });
 
         // Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -36,12 +54,12 @@ public class Catalogue extends AppCompatActivity {
                 }
 
                 if(id == R.id.catalogue){
+                    startActivity(new Intent(getApplicationContext(),Catalogue.class));
+                    overridePendingTransition(0,0);
                     return true;
                 }
 
                 if(id == R.id.contact){
-                    startActivity(new Intent(getApplicationContext(),Contact.class));
-                    overridePendingTransition(0,0);
                     return true;
                 }
 
@@ -56,9 +74,13 @@ public class Catalogue extends AppCompatActivity {
         });
 
     }
+    public void confirmar_compra(View view) {
+        Intent intent = new Intent(this, ConfirmacionCompra.class);
+        startActivity(intent);
+    }
 
-    public void book_detail(View view) {
-        Intent intent = new Intent(this, BookDetail.class);
+    public void regresar(View view) {
+        Intent intent = new Intent(this, Checkout.class);
         startActivity(intent);
     }
 }

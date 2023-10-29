@@ -146,7 +146,7 @@
         app:srcCompat="@drawable/sigue_mi_voz_2" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textLibro1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscando a dorothy"
@@ -170,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textLibro1"
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
@@ -188,7 +188,7 @@
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textLibro2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="La teoria de lo perfecto"
@@ -212,7 +212,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textLibro2"
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
@@ -230,7 +230,7 @@
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textLibro3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sigue mi voz"
@@ -254,7 +254,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textLibro3"
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
