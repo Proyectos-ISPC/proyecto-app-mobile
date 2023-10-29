@@ -46,8 +46,6 @@ public class DbUser extends DbHelper {
         }
 
         return id;
-
-
     }
 
     public boolean checkEmail(String email){
