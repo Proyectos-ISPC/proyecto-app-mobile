@@ -28,7 +28,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-         this.nameInputLayout = findViewById(R.id.nameInput);
+        this.nameInputLayout = findViewById(R.id.nameInput);
         this.emailInputLayout = findViewById(R.id.emailInput);
         this.passwordInputLayout = findViewById(R.id.passwordInput);
 

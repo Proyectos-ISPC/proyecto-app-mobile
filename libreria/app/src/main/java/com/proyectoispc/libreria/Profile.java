@@ -29,7 +29,8 @@ public class Profile extends AppCompatActivity {
     LinearLayout inputNames;
     LinearLayout inputEmail;
     TextView textName, textEmail;
-    String id, email, name;
+    String email, name;
+    int id;
     Boolean account_status;
     TextInputLayout emailInputLayout, nameInputLayout;
     SharedPreferences sharedPreferences;
@@ -74,10 +75,10 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                boolean resp = dbUser.updateUserInfo(id, name, email, account_status);
+                boolean resp = dbUser.updateUserInfo(String.valueOf(id), name, email, account_status);
                 if (resp) {
                     Toast.makeText(Profile.this, "El nombre se actualizo correctamente.", Toast.LENGTH_LONG).show();
-                    dbUser.updateUserPrefDataByID(id);
+                    dbUser.updateUserPrefDataByID(String.valueOf(id));
                     fetchUserData();
                 }
                 else {
@@ -95,10 +96,10 @@ public class Profile extends AppCompatActivity {
                     return;
                 }
 
-                boolean resp = dbUser.updateUserInfo(id, name, email, account_status);
+                boolean resp = dbUser.updateUserInfo(String.valueOf(id), name, email, account_status);
                 if (resp) {
                     Toast.makeText(Profile.this, "El correo se actualizo correctamente.", Toast.LENGTH_LONG).show();
-                    dbUser.updateUserPrefDataByID(id);
+                    dbUser.updateUserPrefDataByID(String.valueOf(id));
                     fetchUserData();
                 } else{
                     Toast.makeText(Profile.this, "En este momento no se puede actualizar el correo.", Toast.LENGTH_LONG).show();
@@ -176,7 +177,7 @@ public class Profile extends AppCompatActivity {
         this.email = this.sharedPreferences.getString(Login.KEY_EMAIL, null);
         this.textEmail.setText(this.email);
         this.textName.setText(this.name);
-        this.id = this.sharedPreferences.getString(Login.KEY_ID, null);
+        this.id = this.sharedPreferences.getInt(Login.KEY_ID, 0);
     }
 
     public void expandirInputsName(View view) {
@@ -233,7 +234,7 @@ public class Profile extends AppCompatActivity {
         builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                boolean success = dbUser.updateUserInfo(id, name, email, false);
+                boolean success = dbUser.updateUserInfo(String.valueOf(id), name, email, false);
                 if (success) {
                     Toast.makeText(Profile.this, "Tu cuenta ha sido deshabilitada.", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();

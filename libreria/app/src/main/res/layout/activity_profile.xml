@@ -44,10 +44,10 @@
         android:layout_marginTop="16dp"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:visibility="gone"
         android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,9 +116,9 @@
         android:divider="@null"
         android:dividerHeight="0dp"
         android:orientation="vertical"
-        android:visibility="gone"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
@@ -183,10 +183,9 @@
         android:id="@+id/imageButton6"
         android:layout_width="50dp"
         android:layout_height="38dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
@@ -195,11 +194,10 @@
         android:id="@+id/imageButton9"
         android:layout_width="43dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shoppingcarticon" />
 
@@ -209,8 +207,8 @@
         android:layout_width="31dp"
         android:layout_height="29dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:onClick="expandirInputEmail"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/inputNames"
@@ -226,8 +224,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/menu_navigation" >
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/menu_navigation"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="297dp"
@@ -277,11 +274,11 @@
         android:id="@+id/delete"
         android:layout_width="35dp"
         android:layout_height="33dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-        app:srcCompat="@drawable/icono_papelera2" />
+        app:srcCompat="@drawable/tachito"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

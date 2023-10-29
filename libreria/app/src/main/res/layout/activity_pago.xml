@@ -1,69 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F7F9F8"
+    tools:context=".Pago">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
 
-    <fragment
-        android:id="@+id/nav_host_fragment_activity_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:navGraph="@navigation/mobile_navigation" />
-
-    <ImageView
-        android:id="@+id/flechaAtras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419"
-        app:srcCompat="@drawable/icono_flecha_izq" />
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
-    <ImageView
-        android:id="@+id/carritoCompra"
-        android:layout_width="29dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+    <ImageButton
+        android:id="@+id/shoppingCartButton"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toEndOf="@+id/flechaAtras"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@drawable/icono_carrito" />
+        app:srcCompat="@drawable/shoppingcarticon" />
+
+    <!-- Checkbox para Pago Virtual -->
+
+    <!-- Logos de tarjetas -->
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="220dp"
         android:layout_height="35dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="70dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,8 +103,7 @@
             android:layout_weight="2"
             android:contentDescription="Imagen de tarjeta"
             app:srcCompat="@drawable/compra_pago"
-            app:tint="@color/color1" />
-        <!-- app:tint="@color/colorViolet" -->
+            app:tint="@color/paymentAproved" />
 
         <ImageView
             android:id="@+id/imageCompraPoint5"
@@ -184,11 +157,7 @@
         <!-- app:tint="@color/colorViolet" -->
     </LinearLayout>
 
-    <!-- Checkbox para Pago Virtual -->
-
-    <!-- Logos de tarjetas -->
-
-    <RadioButton
+    <CheckBox
         android:id="@+id/checkBoxPagoVirtual"
         android:layout_width="110dp"
         android:layout_height="48dp"
@@ -216,28 +185,28 @@
             android:layout_width="35dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
-            android:src="@drawable/logo_visa"
-            android:contentDescription="Logo Visa"/>
-            <!--app:tint="@color/colorGray"-->
+            android:contentDescription="Logo Visa"
+            android:src="@drawable/logo_visa" />
+        <!--app:tint="@color/colorGray"-->
 
         <ImageView
             android:id="@+id/logoMastercard"
             android:layout_width="30dp"
             android:layout_height="29dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/logo_mastercard"
-            android:contentDescription="Logo Mastercard"/>
-            <!--app:tint="@color/colorGray"-->
+            android:contentDescription="Logo Mastercard"
+            android:src="@drawable/logo_mastercard" />
+        <!--app:tint="@color/colorGray"-->
 
         <ImageView
             android:id="@+id/logoAmex"
             android:layout_width="42dp"
             android:layout_height="match_parent"
-            android:src="@drawable/logo_amex"
-            android:contentDescription="Logo American Express"/>
+            android:contentDescription="Logo American Express"
+            android:src="@drawable/logo_amex" />
 
-            <!--app:tint="@color/colorGray"-->
-</LinearLayout>
+        <!--app:tint="@color/colorGray"-->
+    </LinearLayout>
 
     <!-- Formulario para Pago Virtual -->
     <!-- Campos del formulario -->
@@ -297,7 +266,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
 
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/checkBoxPagoLocal"
         android:layout_width="110dp"
         android:layout_height="48dp"
@@ -375,10 +344,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/botonConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:onClick="confirmar_compra"
         android:text="@string/btn_confirmacion"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -387,16 +357,29 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/botonAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:onClick="regresar"
         android:text="@string/btn_volver"
         android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/botonConfirmar"
         app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
