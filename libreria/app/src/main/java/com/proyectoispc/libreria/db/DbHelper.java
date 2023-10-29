@@ -31,8 +31,6 @@ public class DbHelper extends SQLiteOpenHelper {
     // Atributos para la tabla de contacto
 
     private static final String ID_CONTACT = " id_contact INTEGER PRIMARY KEY AUTOINCREMENT,";
-    private static final String NAME_CONTACT = " name_contact TEXT NOT NULL,";
-    private static final String EMAIL_CONTACT = " email_contact TEXT NOT NULL,";
     private static final String MESSAGE_CONTACT = " message_contact TEXT NOT NULL,";
 
 
@@ -59,11 +57,13 @@ public class DbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USER + " (" +
                 ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + " phone TEXT)");
     }
-
     private void createContactTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_CONTACT + " (" +
-                ID_CONTACT + NAME_CONTACT + EMAIL_CONTACT + " message_contact TEXT)");
+                ID_CONTACT + " INTEGER PRIMARY KEY, " +
+                MESSAGE_CONTACT + " TEXT" +
+                ")");
     }
+
 
 
 }

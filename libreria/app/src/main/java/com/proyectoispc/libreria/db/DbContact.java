@@ -15,7 +15,7 @@ public class DbContact extends DbHelper{
         this.context = context;
     }
 
-    public long insertarContact(String name_contact, String email_contact, String message_contact) {
+    public long insertarContact(String message_contact) {
 
         long id = 0;
         try {
@@ -23,8 +23,7 @@ public class DbContact extends DbHelper{
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             ContentValues values = new ContentValues();
-            values.put("name_contact", name_contact);
-            values.put("email_contact",email_contact);
+
             values.put("message_contact", message_contact);
 
             id = db.insert(TABLE_CONTACT, null, values);

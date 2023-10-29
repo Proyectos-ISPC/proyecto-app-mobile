@@ -8,7 +8,7 @@
     tools:context=".Contact">
 
     <ImageButton
-        android:id="@+id/buttonVolver"
+        android:id="@+id/imagenFlecha"
         android:layout_width="54dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
@@ -21,7 +21,7 @@
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/imagenCarrito"
         android:layout_width="57dp"
         android:layout_height="52dp"
         android:layout_marginTop="16dp"
@@ -51,31 +51,33 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="372dp"
-        android:layout_height="129dp"
+        android:layout_width="374dp"
+        android:layout_height="148dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
         android:hint="@string/leave_message"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionContact"
         tools:ignore="NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
 
             android:id="@+id/message"
             android:layout_width="361dp"
-            android:layout_height="102dp"
+            android:layout_height="129dp"
             android:inputType="text"
             android:textSize="17dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
-        android:id="@+id/enviarButton"
-        android:layout_width="337dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/button"
+        android:layout_width="341dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#538DCC"
         android:fontFamily="@font/rubik_medium"
         android:hint="@string/send_message"
@@ -84,48 +86,24 @@
         android:textSize="16sp"
         app:iconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <TextView
         android:id="@+id/findUsContact"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="596dp"
-    android:fontFamily="@font/rubik_medium"
-    android:text="Encontranos en"
-    android:textColor="@color/black"
-    android:textFontWeight="500"
-    android:textSize="18dp"
-    android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="388dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="10dp"
-        android:hint="@string/mail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="472dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Encontranos en"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        tools:ignore="NotSibling">
-
-        <com.google.android.material.textfield.TextInputEditText
-
-            android:id="@+id/email"
-            android:layout_width="362dp"
-            android:layout_height="43dp"
-            android:inputType="text"
-            android:textSize="17dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ubicationContact"
@@ -143,29 +121,6 @@
         app:layout_constraintTop_toBottomOf="@+id/findUsContact" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="372dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="10dp"
-        android:hint="@string/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="NotSibling">
-
-        <com.google.android.material.textfield.TextInputEditText
-
-            android:id="@+id/name"
-            android:layout_width="363dp"
-            android:layout_height="40dp"
-            android:inputType="text"
-            android:textSize="17dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
         android:id="@+id/descriptionContact"
         android:layout_width="370dp"
@@ -175,7 +130,7 @@
         android:text="Envianos un mensaje y te contestaremos a la brevedad."
         android:textColor="@color/black"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -210,10 +165,11 @@
         android:layout_height="1036dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
+        app:layout_constraintVertical_bias="0.008"
         app:navGraph="@navigation/mobile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

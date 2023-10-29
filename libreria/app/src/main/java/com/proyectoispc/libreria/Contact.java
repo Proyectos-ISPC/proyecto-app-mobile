@@ -18,7 +18,7 @@ import com.proyectoispc.libreria.db.DbHelper;
 
 public class Contact extends AppCompatActivity {
 
-    EditText txtName, txtEmail, txtMessage;
+    EditText txtMessage;
 
     Button enviarButton;
 
@@ -26,12 +26,9 @@ public class Contact extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-
-        txtName = findViewById(R.id.name);
-        txtEmail = findViewById(R.id.email);
         txtMessage = findViewById(R.id.message);
 
-        enviarButton = findViewById(R.id.enviarButton);
+        enviarButton = findViewById(R.id.button);
 
         enviarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +42,7 @@ public class Contact extends AppCompatActivity {
                 }
 
                 DbContact dbContact  = new DbContact(Contact.this);
-                long id = dbContact.insertarContact(txtName.getText().toString(), txtEmail.getText().toString(), txtMessage.getText().toString());
+                long id = dbContact.insertarContact(txtMessage.getText().toString());
 
                 if (id > 0)  {
                     Toast.makeText(Contact.this, "Registro Guardado", Toast.LENGTH_LONG).show();
@@ -94,8 +91,6 @@ public class Contact extends AppCompatActivity {
     }
 
     private void limpiar() {
-        txtName.setText("");
-        txtEmail.setText("");
         txtMessage.setText("");
     }
 }

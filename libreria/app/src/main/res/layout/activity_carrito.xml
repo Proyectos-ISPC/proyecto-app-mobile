@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/menu_navigation" />
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
@@ -31,210 +31,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
-
-    <ImageView
-        android:id="@+id/fondoBlanco3"
-        android:layout_width="320dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miCarrito"
-        app:srcCompat="@drawable/boton_redondeado_blanco" />
-
-    <TextView
-        android:id="@+id/totalLibro3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="35dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="$5098,00"
-        android:textColor="#538DCC"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco3"
-        app:layout_constraintStart_toEndOf="@+id/portada3" />
-
-    <ImageView
-        android:id="@+id/portada3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco3"
-        app:layout_constraintStart_toStartOf="@+id/fondoBlanco3"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco3"
-        app:layout_constraintVertical_bias="0.545"
-        app:srcCompat="@drawable/libro" />
-
-    <TextView
-        android:id="@+id/autor3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:fontFamily="@font/rubik"
-        android:text="Alice Oseman"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/portada3"
-        app:layout_constraintTop_toBottomOf="@+id/titulo3" />
-
-    <ImageView
-        android:id="@+id/agregar3"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/unidades3"
-        app:layout_constraintTop_toTopOf="@+id/totalLibro3"
-        app:srcCompat="@drawable/icono_suma" />
-
-    <ImageView
-        android:id="@+id/quitar3"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco3"
-        app:layout_constraintStart_toEndOf="@+id/unidades3"
-        app:srcCompat="@drawable/icono_menos" />
-
-    <ImageView
-        android:id="@+id/eliminar3"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/quitar3"
-        app:layout_constraintStart_toEndOf="@+id/titulo3"
-        app:srcCompat="@drawable/icono_papelera" />
-
-    <TextView
-        android:id="@+id/titulo3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="Heartstopper"
-        android:textColor="#041E41"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/portada3"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco3" />
-
-    <TextView
-        android:id="@+id/unidades3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="38dp"
-        android:fontFamily="@font/rubik"
-        android:text="1"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/agregar3"
-        app:layout_constraintEnd_toEndOf="@+id/fondoBlanco3"
-        app:layout_constraintTop_toBottomOf="@+id/eliminar3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/fondoBlanco2"
-        android:layout_width="320dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="164dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miCarrito"
-        app:srcCompat="@drawable/boton_redondeado_blanco" />
-
-    <ImageView
-        android:id="@+id/portada2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco2"
-        app:layout_constraintStart_toStartOf="@+id/fondoBlanco2"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco2"
-        app:layout_constraintVertical_bias="0.727"
-        app:srcCompat="@drawable/libro" />
-
-    <TextView
-        android:id="@+id/autor2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:fontFamily="@font/rubik"
-        android:text="Alice Oseman"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/portada2"
-        app:layout_constraintTop_toBottomOf="@+id/titulo2" />
-
-    <TextView
-        android:id="@+id/titulo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="Heartstopper"
-        android:textColor="#041E41"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/portada2"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco2" />
-
-    <TextView
-        android:id="@+id/totalLibro2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="35dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="$5098,00"
-        android:textColor="#538DCC"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco2"
-        app:layout_constraintStart_toEndOf="@+id/portada2" />
-
-    <ImageView
-        android:id="@+id/agregar2"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/unidades2"
-        app:layout_constraintTop_toTopOf="@+id/totalLibro2"
-        app:srcCompat="@drawable/icono_suma" />
-
-    <TextView
-        android:id="@+id/unidades2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="38dp"
-        android:fontFamily="@font/rubik"
-        android:text="1"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/agregar2"
-        app:layout_constraintEnd_toEndOf="@+id/fondoBlanco2"
-        app:layout_constraintTop_toBottomOf="@+id/eliminar2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/eliminar2"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/quitar2"
-        app:layout_constraintStart_toEndOf="@+id/titulo2"
-        app:srcCompat="@drawable/icono_papelera" />
-
-    <ImageView
-        android:id="@+id/quitar2"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco2"
-        app:layout_constraintStart_toEndOf="@+id/unidades2"
-        app:srcCompat="@drawable/icono_menos" />
 
     <ImageView
         android:id="@+id/fondoBlancoTotal"
@@ -262,6 +58,7 @@
         android:id="@+id/botonCompra"
         android:layout_width="298dp"
         android:layout_height="59dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#538DCC"
         android:fontFamily="@font/rubik"
         android:text="Iniciar compra"
@@ -297,131 +94,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <ImageView
-        android:id="@+id/flechaAtras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="120dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/carrito"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419"
-        app:srcCompat="@drawable/icono_flecha_izq" />
 
-    <ImageView
-        android:id="@+id/carrito"
-        android:layout_width="29dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/flechaAtras"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
-        app:srcCompat="@mipmap/icono_carrito" />
-
-    <ImageView
-        android:id="@+id/fondoBlanco1"
-        android:layout_width="320dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/miCarrito"
-        app:srcCompat="@drawable/boton_redondeado_blanco" />
-
-    <TextView
-        android:id="@+id/totalLibro1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="35dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="$5098,00"
-        android:textColor="#538DCC"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
-        app:layout_constraintStart_toEndOf="@+id/portada1" />
-
-    <ImageView
-        android:id="@+id/agregar1"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/unidades1"
-        app:layout_constraintTop_toTopOf="@+id/totalLibro1"
-        app:srcCompat="@drawable/icono_suma" />
-
-    <ImageView
-        android:id="@+id/quitar1"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
-        app:layout_constraintStart_toEndOf="@+id/unidades1"
-        app:srcCompat="@drawable/icono_menos" />
-
-    <TextView
-        android:id="@+id/unidades1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="38dp"
-        android:fontFamily="@font/rubik"
-        android:text="1"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/agregar1"
-        app:layout_constraintEnd_toEndOf="@+id/fondoBlanco1"
-        app:layout_constraintTop_toBottomOf="@+id/eliminar1" />
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
-    <TextView
-        android:id="@+id/autor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:fontFamily="@font/rubik"
-        android:text="Alice Oseman"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/portada1"
-        app:layout_constraintTop_toBottomOf="@+id/titulo1" />
 
-    <ImageView
-        android:id="@+id/eliminar1"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/quitar1"
-        app:layout_constraintStart_toEndOf="@+id/titulo1"
-        app:srcCompat="@drawable/icono_papelera" />
-
-    <TextView
-        android:id="@+id/titulo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/rubik_bold"
-        android:text="Heartstopper"
-        android:textColor="#041E41"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/portada1"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco1" />
-
-    <ImageView
-        android:id="@+id/portada1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
-        app:layout_constraintStart_toStartOf="@+id/fondoBlanco1"
-        app:layout_constraintTop_toTopOf="@+id/fondoBlanco1"
-        app:srcCompat="@drawable/libro" />
+    <ImageButton
+        android:id="@+id/shoppingCartButton"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shoppingcarticon" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -429,5 +124,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="95dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectedBooksCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/miCarrito" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
