@@ -126,7 +126,7 @@ public class DbHelper extends SQLiteOpenHelper {
         book.put("name", "Todo por volverte a ver");
         book.put("author", "Florencia Vercellone");
         book.put("description", "Ana vuelve a la Argentina después de 31 años. Ese regreso despierta memorias guardadas bajo llave, recuerdos de una militancia y un amor");
-        book.put("cover", "todo_por_volver");
+        book.put("cover", "todo_por_volverte_a_ver");
         book.put("price", 13000);
         book.put("tag", "recomended");
         values.add(book);
@@ -135,7 +135,7 @@ public class DbHelper extends SQLiteOpenHelper {
         book.put("name", "Sanar la herida");
         book.put("author", "Claudia Luchetti");
         book.put("description", "A través de técnicas y procedimientos específicos, Claudia Luchetti -decodificadora- nos invita a desarmar los códigos alfabéticos y numéricos de nuestros nombres y la fecha de nacimiento ");
-        book.put("cover", "todo_por_volver");
+        book.put("cover", "sanar_la_herida");
         book.put("price", 10000);
         book.put("tag", "recomended");
         values.add(book);
@@ -153,7 +153,7 @@ public class DbHelper extends SQLiteOpenHelper {
         book.put("name", "Sigue mi voz");
         book.put("author", "Ariana Godoy");
         book.put("description", "Todos conocemos el amor pasional que te nubla la razón, el amor a  primera vista que te vacía el estómago y el amor platónico que te llena el corazón de fantasía y admiración.");
-        book.put("cover", "todo_por_volver");
+        book.put("cover", "sigue_mi_voz");
         book.put("price", 9000);
         book.put("tag", "sugested");
         values.add(book);
@@ -162,7 +162,7 @@ public class DbHelper extends SQLiteOpenHelper {
         book.put("name", "La teoria de lo perfecto");
         book.put("author", "Sophie Gonzalez");
         book.put("description", "Cuando Brougham la atrapa recolectando las cartas del mítico casillero 89, en el que Darcy opera su negocio secreto de consejos románticos, surge el chantaje: o ella lo ayuda a recuperar a su exnovia o la delatará.");
-        book.put("cover", "todo_por_volver");
+        book.put("cover", "la_teoria");
         book.put("price", 11000);
         book.put("tag", "sugested");
         values.add(book);
@@ -171,7 +171,7 @@ public class DbHelper extends SQLiteOpenHelper {
         book.put("name", "Heartstopper");
         book.put("author", "Alice Oseman");
         book.put("description", "Charlie y Nick van al mismo colegio; aunque nunca se habían cruzado hasta el día en que los hacen sentarse juntos en su grupo de estudio. Muy pronto se vuelven amigos y más pronto aún Charlie");
-        book.put("cover", "todo_por_volver");
+        book.put("cover", "hearts");
         book.put("price", 9000);
         book.put("tag", "sugested");
         values.add(book);
