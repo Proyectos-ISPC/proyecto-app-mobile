@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "library.db";
     public static final String TABLE_USER = "t_user";
 
@@ -56,7 +56,10 @@ public class DbHelper extends SQLiteOpenHelper {
                         "payment_type VARCHAR(20) NOT NULL, " +
                         "delivery_type VARCHAR(20) NOT NULL, " +
                         "sale_date DATE NOT NULL," +
-                        "user_id INTEGER NOT NULL)");
+                        "user_id INTEGER NOT NULL," +
+                        "FOREIGN KEY (user_id) " +
+                        "REFERENCES t_user(id) " +
+                        "ON DELETE CASCADE)");
     }
 
     private void createDeliveryTable(SQLiteDatabase sqLiteDatabase) {
@@ -69,6 +72,9 @@ public class DbHelper extends SQLiteOpenHelper {
                         "sale_id INTEGER NOT NULL, " +
                         "fullname VARCHAR(100) NOT NULL, " +
                         "tel VARCHAR(45) NOT NULL, " +
-                        "email VARCHAR(60) NOT NULL)");
+                        "email VARCHAR(60) NOT NULL, " +
+                        "FOREIGN KEY (sale_id)" +
+                        "REFERENCES sale(id)" +
+                        "ON DELETE CASCADE)");
     }
 }

@@ -2,15 +2,20 @@ package com.proyectoispc.libreria;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
 import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -20,7 +25,12 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputLayout;
+import com.proyectoispc.libreria.db.DbSale;
 import com.proyectoispc.libreria.db.DbUser;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Profile extends AppCompatActivity {
     ImageButton backbutton;
@@ -34,6 +44,8 @@ public class Profile extends AppCompatActivity {
     EditText emailInput, nameInput;
     Button buttonNames, buttonEmail;
     DbUser dbUser;
+
+    DbSale dbSale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +73,7 @@ public class Profile extends AppCompatActivity {
 
         // Conexion con BBDD
         dbUser = new DbUser(this);
+        dbSale = new DbSale(this);
 
         buttonNames.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -211,5 +224,60 @@ public class Profile extends AppCompatActivity {
 
         this.nameInputLayout.setError(null);
         return true;
+    }
+    public void listAcordeon(int idUser) {
+        Cursor cursor = dbSale.getListSaleID(idUser);
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                LinearLayout accordionContainer = findViewById(R.id.accordionContainer);
+
+                do {
+                    // Obtener los valores de las columnas
+                    int id = cursor.getInt(cursor.getColumnIndex("id"));
+                    Double product = cursor.getDouble(cursor.getColumnIndex("total_cost"));
+                    Long date = cursor.getLong(cursor.getColumnIndex("sale_date"));
+                    String status = cursor.getString(cursor.getColumnIndex("status"));
+
+                    // Crear un CardView para el acordeón
+                    CardView accordionCardView = new CardView(this);
+                    accordionCardView.setLayoutParams(new CardView.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                    ));
+
+                    // Crear un LinearLayout vertical para el contenido del acordeón
+                    LinearLayout accordionContentLayout = new LinearLayout(this);
+                    accordionContentLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                    ));
+                    accordionContentLayout.setOrientation(LinearLayout.VERTICAL);
+
+                    // Configurar el título del acordeón
+                    TextView titleTextView = new TextView(this);
+                    titleTextView.setText("ID: " + id + " - Date: " + date + " - Status: " + status);
+                    accordionContentLayout.addView(titleTextView);
+
+                    // Configurar el cuerpo del acordeón
+                    TextView bodyTextView = new TextView(this);
+                    bodyTextView.setText("Total Cost: " + product);
+                    accordionContentLayout.addView(bodyTextView);
+
+                    // Agregar el contenido al CardView
+                    accordionCardView.addView(accordionContentLayout);
+
+                    // Agregar el CardView al contenedor
+                    accordionContainer.addView(accordionCardView);
+                } while (cursor.moveToNext());
+            }
+            cursor.close();
+        } else {
+            // Informar que no hay productos comprados.
+            LinearLayout accordionContainer = findViewById(R.id.accordionContainer);
+            TextView voidTextView = new TextView(this);
+            voidTextView.setText("No hay registros para mostrar");
+            accordionContainer.addView(voidTextView);
+        }
     }
 }

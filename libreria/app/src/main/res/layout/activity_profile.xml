@@ -229,49 +229,11 @@
         app:menu="@menu/menu_navigation" >
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="314dp"
-        android:layout_height="401dp"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.169">
-
-        <LinearLayout
-            android:id="@+id/itemacordeon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#EFF7FD"
-            android:onClick="expandir"
-            android:orientation="vertical"
-            android:padding="15dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Orden #1234"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="En Proceso"
-                android:textColor="#01D989" />
-
-
-            <TextView
-                android:id="@+id/cuerpo1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lista de los productos comprados y sus precios (en Prceso de construcción)"
-                android:textSize="18sp"
-                android:visibility="gone" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/accordionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
