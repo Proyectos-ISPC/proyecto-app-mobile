@@ -75,6 +75,9 @@ public class Profile extends AppCompatActivity {
         dbUser = new DbUser(this);
         dbSale = new DbSale(this);
 
+        // Carga de compras
+        this.listAcordeon(Integer.parseInt(id));
+
         buttonNames.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -234,10 +237,10 @@ public class Profile extends AppCompatActivity {
 
                 do {
                     // Obtener los valores de las columnas
-                    int id = cursor.getInt(cursor.getColumnIndex("id"));
-                    Double product = cursor.getDouble(cursor.getColumnIndex("total_cost"));
-                    Long date = cursor.getLong(cursor.getColumnIndex("sale_date"));
-                    String status = cursor.getString(cursor.getColumnIndex("status"));
+                    int id = cursor.getInt(0);
+                    Double total_cost = cursor.getDouble(1);
+                    Long date = cursor.getLong(2);
+                    String status = cursor.getString(4);
 
                     // Crear un CardView para el acordeón
                     CardView accordionCardView = new CardView(this);
@@ -261,7 +264,7 @@ public class Profile extends AppCompatActivity {
 
                     // Configurar el cuerpo del acordeón
                     TextView bodyTextView = new TextView(this);
-                    bodyTextView.setText("Total Cost: " + product);
+                    bodyTextView.setText("Total Cost: " + total_cost);
                     accordionContentLayout.addView(bodyTextView);
 
                     // Agregar el contenido al CardView
