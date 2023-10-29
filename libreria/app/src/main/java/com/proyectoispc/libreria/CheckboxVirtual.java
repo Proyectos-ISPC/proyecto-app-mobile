@@ -6,6 +6,9 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
 
 public class CheckboxVirtual extends AppCompatActivity {
 
@@ -38,6 +41,46 @@ public class CheckboxVirtual extends AppCompatActivity {
                 }
             }
         });
+
+        // Método de validación de datos
+        Button btnConfirmacion = findViewById(R.id.button3);
+        btnConfirmacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nombreCompletoStr = nombreCompleto.getText().toString();
+                String numeroTarjetaStr = numeroTarjeta.getText().toString();
+                String fechaExpiracionStr = fechaExpiracion.getText().toString();
+                String codigoSeguridadStr = codigoSeguridad.getText().toString();
+
+                // Validaciones de campos vacíos
+                if (nombreCompletoStr.isEmpty() || numeroTarjetaStr.isEmpty() || fechaExpiracionStr.isEmpty() || codigoSeguridadStr.isEmpty()) {
+                    Toast.makeText(CheckboxVirtual.this, "Todos los campos son requeridos.", Toast.LENGTH_SHORT).show();
+                    return; // Termina la ejecución del método si hay campos vacíos.
+                }
+
+                // Validaciones adicionales
+                if (!nombreCompletoStr.matches("[a-zA-Z]+")) {
+                    nombreCompleto.setError("El nombre debe contener solo letras.");
+                    return;
+                }
+
+                if (!numeroTarjetaStr.matches("\\d{16}")) {
+                    numeroTarjeta.setError("Ingrese un número de tarjeta válido de 16 dígitos.");
+                    return;
+                }
+
+                if (!codigoSeguridadStr.matches("\\d{3}")) {
+                    codigoSeguridad.setError("Ingrese un código de seguridad válido de 3 dígitos.");
+                    return;
+                }
+
+                if (!fechaExpiracionStr.matches("\\d{2}/\\d{2}")) {
+                    fechaExpiracion.setError("Ingrese una fecha de expiración válida (MM/YY).");
+                    return;
+                }
+            }
+        });
+
     }
 
     // Método para habilitar o deshabilitar los campos del formulario
@@ -53,4 +96,5 @@ public class CheckboxVirtual extends AppCompatActivity {
         codigoSeguridad.setEnabled(enabled);
     }
 }
+
 
