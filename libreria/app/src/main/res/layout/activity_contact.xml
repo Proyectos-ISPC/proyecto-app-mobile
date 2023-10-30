@@ -9,10 +9,11 @@
 
     <ImageButton
         android:id="@+id/imagenFlecha"
-        android:layout_width="54dp"
-        android:layout_height="56dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="#F7F9F8"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintBottom_toTopOf="@+id/titleContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
@@ -22,10 +23,11 @@
 
     <ImageButton
         android:id="@+id/imagenCarrito"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="#F7F9F8"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintBottom_toTopOf="@+id/titleContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.918"
@@ -43,7 +45,7 @@
         android:text="Estemos en contacto"
         android:textColor="@color/black"
         android:textFontWeight="500"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -67,20 +69,21 @@
             android:layout_width="361dp"
             android:layout_height="129dp"
             android:inputType="text"
-            android:textSize="17dp" />
+            android:textColorHint="#546E7A"
+            android:textSize="17sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
         android:id="@+id/enviarMensajeButton"
-        android:layout_width="341dp"
+        android:layout_width="320dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#538DCC"
         android:fontFamily="@font/rubik_medium"
         android:hint="@string/send_message"
         android:textAllCaps="false"
-        android:textColorHint="@android:color/white"
+        android:textColorHint="#212121"
         android:textSize="16sp"
         app:iconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +100,7 @@
         android:text="Encontranos en"
         android:textColor="@color/black"
         android:textFontWeight="500"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -112,7 +115,7 @@
         android:fontFamily="@font/rubik_light"
         android:text="Humberto Primo 680. Córdoba, Argentina."
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findUsContact" />
@@ -120,13 +123,13 @@
 
     <TextView
         android:id="@+id/descriptionContact"
-        android:layout_width="370dp"
-        android:layout_height="53dp"
+        android:layout_width="368dp"
+        android:layout_height="59dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="Envianos un mensaje y te contestaremos a la brevedad."
         android:textColor="@color/black"
-        android:textSize="17dp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
@@ -139,6 +142,7 @@
         android:layout_height="43dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="Icono de mapa"
         android:src="@drawable/ic_launcher_marker_foreground"
         app:layout_constraintEnd_toStartOf="@+id/ubicationContact"
         app:layout_constraintHorizontal_bias="0.666"

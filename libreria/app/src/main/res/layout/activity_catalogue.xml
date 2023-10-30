@@ -9,21 +9,23 @@
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
         android:id="@+id/shoppingCartButton"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shoppingcarticon" />
@@ -88,13 +90,14 @@
         android:id="@+id/textInputLayout"
         android:layout_width="430dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText2"
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="90dp"
@@ -102,6 +105,7 @@
         android:drawableStart="@drawable/vector_search"
         android:drawablePadding="12dp"
         android:hint="Buscá por género, autor, título"
+        android:minHeight="48dp"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,12 +116,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
+        android:contentDescription="@string/portada_del_libro"
         android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputEditText2"
-        app:srcCompat="@drawable/sanar_la_herida" />
+        app:srcCompat="@drawable/sanar_la_herida"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textLibro1"
@@ -128,7 +134,8 @@
         android:onClick="book_detail"
         android:text="Sanar la herida"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView10"
@@ -147,7 +154,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:text="$ 5.098,00"
-        android:textColor="@color/color2"
+        android:textColor="#0277BD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -156,6 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:contentDescription="@string/portada_del_libro"
         android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.446"
@@ -172,7 +180,8 @@
         android:onClick="book_detail"
         android:text="Dorothy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView14"
@@ -181,7 +190,7 @@
         android:layout_marginStart="155dp"
         android:layout_marginTop="5dp"
         android:text="$ 5.098,00"
-        android:textColor="@color/color2"
+        android:textColor="#0277BD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -200,6 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:contentDescription="@string/portada_del_libro"
         android:onClick="book_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.795"
@@ -216,7 +226,8 @@
         android:onClick="book_detail"
         android:text="Todo por volver a verte"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView16"
@@ -235,7 +246,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="90dp"
         android:text="$ 5.098,00"
-        android:textColor="@color/color2"
+        android:textColor="#0277BD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
