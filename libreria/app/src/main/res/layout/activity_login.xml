@@ -8,14 +8,14 @@
 
     <Button
         android:id="@+id/register"
-        android:layout_width="335dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#538DCC"
         android:onClick="login"
         android:text="Crear cuenta"
         android:textAllCaps="false"
-        android:textColor="#FCFEFF"
+        android:textColor="#212121"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -25,6 +25,7 @@
         android:layout_width="284dp"
         android:layout_height="284dp"
         android:layout_marginTop="60dp"
+        android:contentDescription="Imagen de pantalla de inicio de sesión"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +63,8 @@
             android:layout_height="45dp"
             android:inputType="textEmailAddress"
             android:paddingBottom="13dp"
-            android:textSize="30px"
+            android:textColorHint="#757575"
+            android:textSize="16sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
@@ -87,7 +89,7 @@
             android:layout_height="45dp"
             android:inputType="textPassword"
             android:paddingBottom="13dp"
-            android:textSize="30px"
+            android:textSize="16sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
 
@@ -95,14 +97,14 @@
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="335dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="25dp"
         android:backgroundTint="#538DCC"
         android:onClick="login"
         android:text="Iniciar sesión"
         android:textAllCaps="false"
-        android:textColor="#FCFEFF"
+        android:textColor="#212121"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />

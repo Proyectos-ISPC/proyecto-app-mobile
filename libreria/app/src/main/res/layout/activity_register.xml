@@ -9,14 +9,14 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="335dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#538DCC"
         android:onClick="onLogin"
         android:text="Iniciar sesión"
         android:textAllCaps="false"
-        android:textColor="#FCFEFF"
+        android:textColor="#212121"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -25,6 +25,7 @@
         android:id="@+id/imageView15"
         android:layout_width="284dp"
         android:layout_height="284dp"
+        android:contentDescription="Imagen de registro de usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,13 +117,13 @@
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="335dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="#538DCC"
         android:text="Crear cuenta"
         android:textAllCaps="false"
-        android:textColor="#FCFEFF"
+        android:textColor="#212121"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />

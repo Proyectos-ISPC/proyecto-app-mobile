@@ -12,15 +12,15 @@
     <color name="dark_text">#041E41</color>
     <color name="grey_text">#686767</color>
     <color name="greenCheck">#00FF00</color>
-    <color name="paymentAproved">#A4D640</color>
+    <color name="paymentAproved">#306311</color>
 
     <color name="color1">#041E41</color>
     <color name="color2">#538DCC</color>
     <color name="color3">#C43B3B</color>
 
     <color name="colorGray">#c2c2c2</color>
-
     <color name="colorGray2">#909497</color>
+    <color name="colorGray3">#787b7d</color>
     <color name="colorViolet">#7039AE</color>
 
 </resources>

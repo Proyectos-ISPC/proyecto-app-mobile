@@ -9,21 +9,23 @@
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
         android:id="@+id/shoppingCartButton"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shoppingcarticon" />
@@ -33,6 +35,7 @@
         android:layout_width="174dp"
         android:layout_height="191dp"
         android:layout_marginTop="90dp"
+        android:contentDescription="@string/portada_del_libro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,7 +48,7 @@
         android:layout_marginTop="15dp"
         android:text="Heartstopper"
         android:textColor="#041E41"
-        android:textSize="8pt"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -60,7 +63,7 @@
         android:layout_marginTop="36dp"
         android:text="$6.700,00"
         android:textColor="#041E41"
-        android:textSize="9pt"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBookName" />
@@ -79,25 +82,26 @@
 
     <TextView
         android:id="@+id/textViewDescription"
-        android:layout_width="334dp"
-        android:layout_height="31dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Sinopsis: Charlie y Nick van al mismo colegio; aunque nunca se habían cruzado hasta el día en que los hacen sentarse juntos en su grupo de estudio. Muy pronto se vuelven amigos y más pronto aún Charlie "
         android:textColor="#5D5E5F"
-        android:textSize="20px"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
 
     <Button
         android:id="@+id/addBook"
-        android:layout_width="335dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#538DCC"
+        android:contentDescription="Botón para agregar al carrito"
         android:text="Agregar al carrito"
         android:textAllCaps="false"
-        android:textColor="#FCFEFF"
+        android:textColor="#212121"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
