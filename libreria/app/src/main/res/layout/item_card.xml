@@ -17,6 +17,7 @@
             android:id="@+id/fondoBlanco1"
             android:layout_width="320dp"
             android:layout_height="109dp"
+            android:contentDescription="Fondo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
@@ -42,6 +43,7 @@
             android:layout_height="14dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="Agregar libro"
             app:layout_constraintEnd_toStartOf="@+id/cardTotalCuantity"
             app:layout_constraintTop_toBottomOf="@+id/eliminar1"
             app:srcCompat="@drawable/icono_suma" />
@@ -52,6 +54,7 @@
             android:layout_height="14dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:contentDescription="Restar unidad"
             app:layout_constraintEnd_toEndOf="@+id/fondoBlanco1"
             app:layout_constraintTop_toBottomOf="@+id/eliminar1"
             app:srcCompat="@drawable/icono_menos" />
@@ -64,7 +67,7 @@
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/rubik"
             android:text="1"
-            android:textSize="10sp"
+            android:textSize="11sp"
             app:layout_constraintEnd_toStartOf="@+id/quitar1"
             app:layout_constraintTop_toBottomOf="@+id/eliminar1" />
 
@@ -74,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/rubik"
-            android:textSize="10sp"
+            android:textSize="11sp"
             app:layout_constraintStart_toEndOf="@+id/cardImageProduct"
             app:layout_constraintTop_toBottomOf="@+id/cardBookName" />
 
@@ -84,6 +87,7 @@
             android:layout_height="14dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="30dp"
+            android:contentDescription="Eliminar del carrito"
             app:layout_constraintEnd_toEndOf="@+id/fondoBlanco1"
             app:layout_constraintTop_toTopOf="@+id/fondoBlanco1"
             app:srcCompat="@drawable/icono_papelera" />
@@ -105,9 +109,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:contentDescription="Imagen del libro"
             app:layout_constraintBottom_toBottomOf="@+id/fondoBlanco1"
             app:layout_constraintStart_toStartOf="@+id/fondoBlanco1"
-            app:layout_constraintTop_toTopOf="@+id/fondoBlanco1"/>
+            app:layout_constraintTop_toTopOf="@+id/fondoBlanco1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"

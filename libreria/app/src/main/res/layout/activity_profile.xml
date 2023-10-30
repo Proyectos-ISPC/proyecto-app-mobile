@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:inputType="text"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:inputType="text"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -169,9 +169,10 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="28dp"
+        android:contentDescription="Icono de modificar información"
         android:onClick="expandirInputsName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.717"
@@ -193,8 +194,8 @@
 
     <ImageButton
         android:id="@+id/imageButton9"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/white"
@@ -206,12 +207,12 @@
 
     <ImageButton
         android:id="@+id/imageButton11"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Icono de modificar información"
         android:onClick="expandirInputEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/inputNames"
         app:srcCompat="@drawable/editpencil" />
@@ -259,7 +260,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="En Proceso"
-                android:textColor="#01D989" />
+                android:textColor="#2E7D32" />
 
 
             <TextView
@@ -274,13 +275,14 @@
 
     <ImageButton
         android:id="@+id/delete"
-        android:layout_width="35dp"
-        android:layout_height="33dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="32dp"
         android:background="@color/white"
+        android:contentDescription="Icono de eliminar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-        app:srcCompat="@drawable/tachito"/>
+        app:srcCompat="@drawable/tachito" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

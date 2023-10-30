@@ -83,7 +83,7 @@
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="350dp"
-        android:layout_height="59dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Sinopsis: Charlie y Nick van al mismo colegio; aunque nunca se habían cruzado hasta el día en que los hacen sentarse juntos en su grupo de estudio. Muy pronto se vuelven amigos y más pronto aún Charlie "
         android:textColor="#5D5E5F"
