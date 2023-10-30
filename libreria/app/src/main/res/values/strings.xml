@@ -4,7 +4,9 @@
     <string name="title_dashboard">Catálogo</string>
     <string name="title_notifications">Mi usuario</string>
     <string name="title_contact">Contacto</string>
-    <string name="name">Nombre y apellido</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="save">Guardar</string>
     <string name="mail">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="leave_message">Dejanos tu mensaje</string>
@@ -22,6 +24,35 @@
     <string name="codigo_seguridad">CVV</string>
     <string name="btn_confirmacion">Confirmar compra</string>
     <string name="btn_volver">Volver</string>
+
+
+    <!-- Strings para activity_checkout -->
+
+    <!-- Para titulos -->
+    <string name="titulo_envioDatos_checkout">Datos para el envío</string>
+    <string name="titulo_retiroLocal_checkout">Retiro por local</string>
+    <string name="titulo_envíoDomicilio_checkout">Envío a domicilio</string>
+    <!-- Para botones -->
+    <string name="button_irPagar_chackout">Ir a pagar</string>
+    <string name="button_volver_chackout">Volver</string>
+    <!-- Para hints -->
+    <string name="hint_nombrecompleto_checkout">Nombre y apellido</string>
+    <string name="hint_correoelectrónico_checkout">Correo electronico</string>
+    <string name="hint_códigoarea_checkout">Código de área</string>
+    <string name="hint_númerotelefono_checkout">Número de teléfono</string>
+    <string name="hint_calleynúmero_checkout">Calle y número</string>
+    <string name="hint_localidad_checkout">Localidad</string>
+    <string name="hint_provincia_checkout">Provincia</string>
+    <string name="hint_códigopostal_checkout">Código postal</string>
+
+    <!-- Strings para activity_feedback_error_buscador -->
+
+    <!--Strings para text-->
+    <string name="text_losiento_feedback_error">Lo sentimos :(</string>
+    <string name="text_noencuentrolibros_feedback_error">No encontramos el libro que estas buscando</string>
+
+    <!--Strings para button-->
+    <string name="button_volver_feedback_error">Volver al catálogo</string>
 
 
 </resources>
