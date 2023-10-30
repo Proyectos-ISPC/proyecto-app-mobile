@@ -11,21 +11,23 @@
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <ImageButton
         android:id="@+id/shoppingCartButton"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shoppingcarticon" />
@@ -48,58 +50,58 @@
             android:id="@+id/imageCompraEnvio"
             android:layout_width="30dp"
             android:layout_height="35dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="2"
             android:contentDescription="Imagen camión"
             app:srcCompat="@drawable/compra_envio"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
         <!-- app:tint="@color/colorViolet" -->
 
         <ImageView
             android:id="@+id/imageCompraPoint1"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint2"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint3"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint4"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPago"
             android:layout_width="30dp"
             android:layout_height="35dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="2"
             android:contentDescription="Imagen de tarjeta"
             app:srcCompat="@drawable/compra_pago"
@@ -109,41 +111,41 @@
             android:id="@+id/imageCompraPoint5"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint6"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint7"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraPoint8"
             android:layout_width="1dp"
             android:layout_height="35dp"
-            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:contentDescription="Imagen punto"
             app:srcCompat="@drawable/compra_point"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
 
         <ImageView
             android:id="@+id/imageCompraRealizada"
@@ -153,7 +155,7 @@
             android:layout_weight="2"
             android:contentDescription="Compra realizada"
             app:srcCompat="@drawable/compra_realizada"
-            app:tint="@color/colorGray2" />
+            app:tint="@color/colorGray3" />
         <!-- app:tint="@color/colorViolet" -->
     </LinearLayout>
 
@@ -184,7 +186,7 @@
             android:id="@+id/logoVisa"
             android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:contentDescription="Logo Visa"
             android:src="@drawable/logo_visa" />
         <!--app:tint="@color/colorGray"-->
@@ -193,7 +195,7 @@
             android:id="@+id/logoMastercard"
             android:layout_width="30dp"
             android:layout_height="29dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:contentDescription="Logo Mastercard"
             android:src="@drawable/logo_mastercard" />
         <!--app:tint="@color/colorGray"-->
@@ -348,8 +350,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue_soft"
         android:onClick="confirmar_compra"
         android:text="@string/btn_confirmacion"
+        android:textColor="#212121"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.765"
@@ -361,8 +365,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/blue_soft"
         android:onClick="regresar"
         android:text="@string/btn_volver"
+        android:textColor="#212121"
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/botonConfirmar"
         app:layout_constraintHorizontal_bias="0.641"

@@ -52,21 +52,24 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Icono Modificar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toBottomOf="@+id/textView18"
-        app:srcCompat="@drawable/editpencil" />
+        app:srcCompat="@drawable/editpencil"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,10 +78,11 @@
 
     <ImageButton
         android:id="@+id/imageButton9"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@color/white"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,9 +91,10 @@
 
     <ImageButton
         android:id="@+id/imageButton11"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="Icono Modificar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="En Proceso"
-                android:textColor="#01D989" />
+                android:textColor="#2E7D32" />
 
 
             <TextView

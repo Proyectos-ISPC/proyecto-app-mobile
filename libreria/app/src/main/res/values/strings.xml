@@ -54,5 +54,14 @@
     <!--Strings para button-->
     <string name="button_volver_feedback_error">Volver al catálogo</string>
 
+    <string name="volver_atras">Volver hacia atrás</string>
+    <string name="ir_al_carrito">Ir al carrito</string>
+    <string name="portada_del_libro">Imagen de la portada del libro</string>
+    <string name="iniciar_compra">Iniciar compra</string>
+    <string name="imagen_cami_n">Imagen camión</string>
+    <string name="imagen_de_tarjeta">Imagen de tarjeta</string>
+    <string name="imagen_punto">Imagen punto</string>
+    <string name="confirmacion_compra">Compra realizada</string>
+
 
 </resources>

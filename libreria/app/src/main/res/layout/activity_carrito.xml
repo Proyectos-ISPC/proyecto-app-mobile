@@ -20,7 +20,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/menu_navigation" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
@@ -43,7 +43,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/boton_redondeado_blanco" />
+        app:srcCompat="@drawable/boton_redondeado_blanco"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/totalTexto"
@@ -62,10 +63,12 @@
         android:layout_height="59dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#538DCC"
+        android:contentDescription="@string/iniciar_compra"
         android:fontFamily="@font/rubik"
         android:onClick="iniciarCompra"
-        android:text="Iniciar compra"
+        android:text="@string/iniciar_compra"
         android:textAllCaps="false"
+        android:textColor="#212121"
         app:layout_constraintBottom_toTopOf="@+id/nav_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -101,10 +104,11 @@
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="50dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/volver_atras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
@@ -112,11 +116,12 @@
 
     <ImageButton
         android:id="@+id/shoppingCartButton"
-        android:layout_width="43dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/white"
+        android:contentDescription="@string/ir_al_carrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shoppingcarticon" />
