@@ -44,7 +44,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         // Barra superior
-        backbutton = findViewById(R.id.imageButton6);
+        backbutton = findViewById(R.id.buttonVolver);
         carrito = findViewById(R.id.imageButton9);
 
         // Se setea dinamicamente el nombre y el email

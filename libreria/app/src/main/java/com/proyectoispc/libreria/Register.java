@@ -42,7 +42,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!validateRegister()){
-                  return;
+                    return;
                 }
 
                 DbUser dbUser = new DbUser(Register.this);
@@ -125,5 +125,5 @@ public class Register extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),Login.class));
         overridePendingTransition(0,0);
     }
-    
+
 }

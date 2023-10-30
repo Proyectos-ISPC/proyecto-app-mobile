@@ -14,13 +14,18 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "library.db";
+
+    // El nombre para la tabla de user
     public static final String TABLE_USER = "t_user";
+    // El nombre para la tabla de contacto
+    public static final String TABLE_CONTACT = "t_contact";
     public static final String TABLE_BOOK = "t_book";
     public static final String TABLE_SALE = "t_sale";
     public static final String TABLE_DELIVERY = "t_delivery";
     public static final String TABLE_PAYMENT = "t_payment";
 
 
+    // Atributos para la tabla de user
     private static final String ID = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
     private static final String EMAIL = " email TEXT NOT NULL,";
     private static final String PASSWORD = " password TEXT NOT NULL,";
@@ -31,6 +36,12 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String PHONE = " phone TEXT,";
     private static final String ACCOUNT_STATUS = " account_status BOOLEAN,";
     Context context_;
+
+    // Atributos para la tabla de contacto
+
+    private static final String ID_CONTACT = " id_contact INTEGER PRIMARY KEY AUTOINCREMENT,";
+    private static final String MESSAGE_CONTACT = " message_contact TEXT NOT NULL,";
+
 
 //Atributos tabla SALE
     private static final String ID_SALE = " id INTEGER PRIMARY KEY AUTOINCREMENT,";
@@ -70,6 +81,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         createUserTable(sqLiteDatabase);
+        createContactTable(sqLiteDatabase);
         createBookTable(sqLiteDatabase);
         createSaleTable(sqLiteDatabase);
         createDeliveryTable(sqLiteDatabase);
@@ -79,6 +91,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_USER);
+        sqLiteDatabase.execSQL("DROP TABLE " + TABLE_CONTACT);
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_SALE);
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_DELIVERY);
         sqLiteDatabase.execSQL("DROP TABLE " + TABLE_PAYMENT);
@@ -99,10 +112,15 @@ public class DbHelper extends SQLiteOpenHelper {
                 ID_PAYMENT + NAME_CARD + CVV + CARD_NUMBER + EXPIRATION_DATE + " sale_id TEXT)");
     }
 
-
     private void createUserTable(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_USER + " (" +
-                ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + ACCOUNT_STATUS + " phone TEXT)");
+                ID + EMAIL + PASSWORD + NAME + LAST_NAME + DNI + ADDRESS + " phone TEXT)");
+    }
+    private void createContactTable(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_CONTACT + " (" +
+                ID_CONTACT + " INTEGER PRIMARY KEY, " +
+                MESSAGE_CONTACT + " TEXT" +
+                ")");
     }
 
     private void createBookTable(SQLiteDatabase sqLiteDatabase) {
@@ -113,11 +131,11 @@ public class DbHelper extends SQLiteOpenHelper {
         fillBookTable(sqLiteDatabase);
     }
 
-     private void fillBookTable(SQLiteDatabase db) {
-            List<ContentValues> values = getContentValues(db);
-         for (ContentValues element : values) {
+    private void fillBookTable(SQLiteDatabase db) {
+        List<ContentValues> values = getContentValues(db);
+        for (ContentValues element : values) {
              db.insert(TABLE_BOOK, null, element);
-         }
+        }
     }
 
      private List<ContentValues> getContentValues(SQLiteDatabase db){

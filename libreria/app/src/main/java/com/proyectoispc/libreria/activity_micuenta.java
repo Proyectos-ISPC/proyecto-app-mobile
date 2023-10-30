@@ -3,7 +3,6 @@ package com.proyectoispc.libreria;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -14,8 +13,6 @@ import android.widget.TextView;
 
 public class activity_micuenta extends AppCompatActivity {
     ImageButton backbutton;
-
-    ImageButton carrito;
     TextView cuerpo;
     LinearLayout itemacordeon;
 
@@ -23,24 +20,16 @@ public class activity_micuenta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_micuenta);
-        backbutton = findViewById(R.id.imageButton6);
-        carrito = findViewById(R.id.imageButton9);
+        backbutton = findViewById(R.id.buttonVolver);
         cuerpo = findViewById(R.id.cuerpo1);
         itemacordeon = findViewById(R.id.itemacordeon);
         backbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent intent = new Intent(activity_micuenta.this, Home.class);
+                startActivity(intent);
             }
         });
-        carrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Carrito.class));
-                overridePendingTransition(0,0);
-            }
-        });
-
     }
 
     public void expandir(View view) {

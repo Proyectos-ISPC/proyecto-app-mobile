@@ -14,10 +14,12 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputLayout;
+import com.proyectoispc.libreria.db.DbContact;
 
 public class Contact extends AppCompatActivity {
 
     Button enviarMensajeButton;
+    EditText nameInput; // Declare nameInput here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +36,20 @@ public class Contact extends AppCompatActivity {
         ImageView imagenCarrito = findViewById(R.id.imagenCarrito);
         enviarMensajeButton = findViewById(R.id.enviarMensajeButton);
         TextInputLayout messageLayout = findViewById(R.id.messageLayout);
-        EditText nameInput = messageLayout.getEditText();
+        nameInput = messageLayout.getEditText(); // Initialize nameInput here
 
         enviarMensajeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nameInput.setText("");
-                Toast.makeText(Contact.this, "Comentario enviado", Toast.LENGTH_LONG).show();
+                DbContact dbContact  = new DbContact(Contact.this);
+                long id = dbContact.insertarContact(nameInput.getText().toString());
+
+                if (id > 0)  {
+                    Toast.makeText(Contact.this, "Registro Guardado", Toast.LENGTH_LONG).show();
+                    limpiar();
+                } else {
+                    Toast.makeText(Contact.this, "Error al guardar Registro", Toast.LENGTH_LONG).show();
+                }
             }
         });
         imagenFlecha.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +67,7 @@ public class Contact extends AppCompatActivity {
             }
         });
 
-        // Perform item selected listener
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -90,5 +99,8 @@ public class Contact extends AppCompatActivity {
             }
         });
 
+    }
+    private void limpiar() {
+        nameInput.setText("");
     }
 }
